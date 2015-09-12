@@ -10,6 +10,10 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *mainContentLbl;
+@property (weak, nonatomic) IBOutlet UILabel *measureLbl;
+@property (weak, nonatomic) IBOutlet UILabel *getSizeLbl;
+@property (weak, nonatomic) IBOutlet UILabel *shopLbl;
 
 @end
 
