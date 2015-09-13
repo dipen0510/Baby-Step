@@ -19,8 +19,6 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.navigationController.navigationBarHidden = true;
     
-    NSLog(@"Fiprn");
-    
 }
 
 - (void)didReceiveMemoryWarning {

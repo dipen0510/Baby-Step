@@ -24,10 +24,14 @@
      [self.view setMultipleTouchEnabled:YES];
     
     self.footImgView.layer.zPosition = 1;
+    self.footScanButton.layer.zPosition = 10;
     self.placeFootImgView.layer.zPosition = 10;
     
     isScanStarted = true;
     [NSTimer scheduledTimerWithTimeInterval:20.0 target:self selector:@selector(scanComplete) userInfo:nil repeats:NO];
+    self.scanHeadLbl.text = @"Scanning";
+    
+
     
 }
 
@@ -39,6 +43,11 @@
 - (void) scanComplete {
     
     isScanStarted = false;
+    self.scanHeadLbl.text = @"Scan Completed";
+    
+    [self.footScanButton setHidden:false];
+    [self.placeFootImgView setHidden:true];
+    
     int i =0;
     for (UITouch* touch in touchArr) {
         
@@ -64,12 +73,13 @@
     
     NSLog(@"SIZE is %f",(maxY - minY)*0.026458333*0.1331);
     
-    self.scanHeadLbl.text = [NSString stringWithFormat:@"Size %f",(maxY - minY)*0.026458333*0.1331];
+    sizeInCms = (maxY - minY)*0.026458333;
     
-    // Remove old red circles on screen
-    /*for (UIView *view in touchViewArr) {
-        [view removeFromSuperview];
-    }*/
+    
+    [self performSegueWithIdentifier:@"showSizeSegue" sender:nil];
+    
+    
+   // self.scanHeadLbl.text = [NSString stringWithFormat:@"Size %f",(maxY - minY)*0.026458333*0.1331];
     
 }
 
@@ -104,14 +114,76 @@
     
 }
 
-/*
+- (IBAction)footScanButtonTapped:(id)sender {
+    
+    
+    if (!isScanStarted) {
+        isScanStarted = true;
+        
+        // Remove old red circles on screen
+        for (UIView *view in touchViewArr) {
+            [view removeFromSuperview];
+        }
+        
+        touchViewArr = [[NSMutableArray alloc] init];
+        touchArr = [[NSMutableArray alloc] init];
+        
+        minY = 0.0;
+        maxY = 0.0;
+        sizeInCms = 0.0;
+        
+        [NSTimer scheduledTimerWithTimeInterval:20.0 target:self selector:@selector(scanComplete) userInfo:nil repeats:NO];
+        self.scanHeadLbl.text = @"Scanning";
+        
+        [self.footScanButton setHidden:true];
+        [self.placeFootImgView setHidden:false];
+        
+        
+    }
+    
+    
+    
+}
+
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+  
+    if ([[segue identifier] isEqualToString:@"showSizeSegue"]) {
+        
+        RecommendedSizeViewController* controller = (RecommendedSizeViewController *)[segue destinationViewController];
+        
+        controller.sizeInCms = sizeInCms;
+        
+        MZFormSheetSegue *formSheetSegue = (MZFormSheetSegue *)segue;
+        MZFormSheetController *formSheet = formSheetSegue.formSheetController;
+        formSheet.transitionStyle = MZFormSheetTransitionStyleBounce;
+        formSheet.cornerRadius = 8.0;
+        
+        //NSString *deviceType = [UIDevice currentDevice].model;
+        
+        formSheet.presentedFormSheetSize = CGSizeMake(600, 520);
+        
+        
+        formSheet.didTapOnBackgroundViewCompletionHandler = ^(CGPoint location) {
+            //didTapBackGroundView = true;
+        };
+        
+        formSheet.shadowRadius = 2.0;
+        formSheet.shadowOpacity = 0.3;
+        formSheet.shouldDismissOnBackgroundViewTap = YES;
+        formSheet.shouldCenterVertically = YES;
+        
+        
+        formSheet.didDismissCompletionHandler = ^(UIViewController *presentedFSViewController) {
+            
+        };
+        
+    }
+    
 }
-*/
+
 
 @end

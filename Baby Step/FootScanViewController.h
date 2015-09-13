@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RecommendedSizeViewController.h"
+#import "MZFormSheetController.h"
+#import "MZFormSheetSegue.h"
 
 @interface FootScanViewController : UIViewController {
     
@@ -16,9 +19,13 @@
     float minY;
     float maxY;
     
+    float sizeInCms;
+    
 }
 
-@property (weak, nonatomic) IBOutlet UIImageView *footImgView;
 @property (weak, nonatomic) IBOutlet UIImageView *placeFootImgView;
+@property (weak, nonatomic) IBOutlet UIButton *footScanButton;
+@property (weak, nonatomic) IBOutlet UIImageView *footImgView;
 @property (weak, nonatomic) IBOutlet UILabel *scanHeadLbl;
+- (IBAction)footScanButtonTapped:(id)sender;
 @end
