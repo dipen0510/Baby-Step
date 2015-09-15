@@ -44,6 +44,10 @@
 		18FCF4AF1BA4D5D300D5504A /* foot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FCF4AD1BA4D5D300D5504A /* foot@2x.png */; };
 		18FCF4B01BA4D5D300D5504A /* Place_foot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FCF4AE1BA4D5D300D5504A /* Place_foot@2x.png */; };
 		18FCF4B31BA4D8A000D5504A /* FootScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF4B21BA4D8A000D5504A /* FootScanViewController.m */; };
+		D45623741BA7E7FE0090C2F6 /* text_field@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D45623731BA7E7FE0090C2F6 /* text_field@2x.png */; };
+		D45623771BA7E9100090C2F6 /* facebook_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D45623751BA7E9100090C2F6 /* facebook_btn@2x.png */; };
+		D45623781BA7E9100090C2F6 /* Register@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D45623761BA7E9100090C2F6 /* Register@2x.png */; };
+		D45623791BA7EB560090C2F6 /* HanziPenSC-W3.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1811C3E31BA5FF07006A7DB5 /* HanziPenSC-W3.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +117,9 @@
 		18FCF4AE1BA4D5D300D5504A /* Place_foot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Place_foot@2x.png"; sourceTree = "<group>"; };
 		18FCF4B11BA4D8A000D5504A /* FootScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootScanViewController.h; sourceTree = "<group>"; };
 		18FCF4B21BA4D8A000D5504A /* FootScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootScanViewController.m; sourceTree = "<group>"; };
+		D45623731BA7E7FE0090C2F6 /* text_field@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "text_field@2x.png"; sourceTree = "<group>"; };
+		D45623751BA7E9100090C2F6 /* facebook_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook_btn@2x.png"; sourceTree = "<group>"; };
+		D45623761BA7E9100090C2F6 /* Register@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Register@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +258,9 @@
 		18FCF4961BA4BF9A00D5504A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D45623751BA7E9100090C2F6 /* facebook_btn@2x.png */,
+				D45623761BA7E9100090C2F6 /* Register@2x.png */,
+				D45623731BA7E7FE0090C2F6 /* text_field@2x.png */,
 				1811C4141BA60840006A7DB5 /* ScanAgain@2x.png */,
 				1811C3E71BA6030E006A7DB5 /* Close_popover@2x.png */,
 				1811C3E81BA6030E006A7DB5 /* facebook_popover@2x.png */,
@@ -355,6 +365,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D45623791BA7EB560090C2F6 /* HanziPenSC-W3.ttf in Resources */,
 				18FCF49A1BA4C0AD00D5504A /* logo_top@2x.png in Resources */,
 				18FCF4A21BA4C28A00D5504A /* background@2x.png in Resources */,
 				1811C3E61BA600A9006A7DB5 /* Sizes_bg@2x.png in Resources */,
@@ -365,8 +376,10 @@
 				1811C3EE1BA6030E006A7DB5 /* invite_friends_popover@2x.png in Resources */,
 				1811C4151BA60840006A7DB5 /* ScanAgain@2x.png in Resources */,
 				18FCF4811BA4BBBC00D5504A /* LaunchScreen.xib in Resources */,
+				D45623741BA7E7FE0090C2F6 /* text_field@2x.png in Resources */,
 				1811C3ED1BA6030E006A7DB5 /* facebook_popover@2x.png in Resources */,
 				1811C3EC1BA6030E006A7DB5 /* Close_popover@2x.png in Resources */,
+				D45623771BA7E9100090C2F6 /* facebook_btn@2x.png in Resources */,
 				18FCF47E1BA4BBBC00D5504A /* Images.xcassets in Resources */,
 				18FCF49E1BA4C1F000D5504A /* facebook@2x.png in Resources */,
 				1811C3EF1BA6030E006A7DB5 /* mail_popover@2x.png in Resources */,
@@ -374,6 +387,7 @@
 				18FCF4B01BA4D5D300D5504A /* Place_foot@2x.png in Resources */,
 				18FCF4A71BA4C7D500D5504A /* measure@2x.png in Resources */,
 				18FCF4A01BA4C1F000D5504A /* twitter@2x.png in Resources */,
+				D45623781BA7E9100090C2F6 /* Register@2x.png in Resources */,
 				18FCF4AB1BA4CA8100D5504A /* GetStartedBtn@2x.png in Resources */,
 				18FCF4981BA4BFA200D5504A /* splash_screen@2x.png in Resources */,
 				18FCF4A91BA4C7D600D5504A /* size@2x.png in Resources */,
