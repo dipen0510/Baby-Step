@@ -7,6 +7,7 @@
 //
 
 #import "RecommendedSizeViewController.h"
+#import "MZFormSheetController.h"
 
 @interface RecommendedSizeViewController ()
 
@@ -168,5 +169,6 @@
 */
 
 - (IBAction)closeButtonTapped:(id)sender {
+    [self.formSheetController dismissAnimated:true completionHandler:nil];
 }
 @end

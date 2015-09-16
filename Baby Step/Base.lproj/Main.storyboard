@@ -468,6 +468,9 @@
                                 <state key="normal" image="Register.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="iN7-lA-iqT" kind="show" id="qZC-Ai-wNG"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XpF-Hr-i4f">
                                 <rect key="frame" x="379" y="795" width="42" height="29"/>
@@ -488,6 +491,9 @@
                                 <state key="normal" image="facebook_btn.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="iN7-lA-iqT" kind="show" id="On7-YP-Tht"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5VN-dz-5j6">
                                 <rect key="frame" x="110" y="51" width="38" height="40"/>
@@ -1042,5 +1048,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="igD-zS-rfF"/>
+        <segue reference="qZC-Ai-wNG"/>
     </inferredMetricsTieBreakers>
 </document>
