@@ -24,6 +24,19 @@
 		1811C4101BA605F2006A7DB5 /* UIViewController+TargetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811C4071BA605F2006A7DB5 /* UIViewController+TargetViewController.m */; };
 		1811C4131BA6068D006A7DB5 /* RecommendedSizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811C4121BA6068D006A7DB5 /* RecommendedSizeViewController.m */; };
 		1811C4151BA60840006A7DB5 /* ScanAgain@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1811C4141BA60840006A7DB5 /* ScanAgain@2x.png */; };
+		18250C331BB70E7900F24551 /* Boy_AddChild_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18250C311BB70E7900F24551 /* Boy_AddChild_active@2x.png */; };
+		18250C341BB70E7900F24551 /* Boy_AddChild@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18250C321BB70E7900F24551 /* Boy_AddChild@2x.png */; };
+		18250C371BB70E8A00F24551 /* Girl_AddChild_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18250C351BB70E8A00F24551 /* Girl_AddChild_active@2x.png */; };
+		18250C381BB70E8A00F24551 /* Girl_AddChild@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18250C361BB70E8A00F24551 /* Girl_AddChild@2x.png */; };
+		18250C3A1BB7128000F24551 /* Start_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18250C391BB7128000F24551 /* Start_btn@2x.png */; };
+		18250C3E1BB7163F00F24551 /* Step_01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18250C3B1BB7163F00F24551 /* Step_01@2x.png */; };
+		18250C3F1BB7163F00F24551 /* Step_02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18250C3C1BB7163F00F24551 /* Step_02@2x.png */; };
+		18250C401BB7163F00F24551 /* Step_03@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18250C3D1BB7163F00F24551 /* Step_03@2x.png */; };
+		18250C421BB71BC400F24551 /* AddBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18250C411BB71BC400F24551 /* AddBtn@2x.png */; };
+		18250C451BB71DF700F24551 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18250C441BB71DF700F24551 /* RegisterViewController.m */; };
+		18250C481BB71E3700F24551 /* HowToScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18250C471BB71E3700F24551 /* HowToScanViewController.m */; };
+		18250C4B1BB71E5F00F24551 /* AddChildPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18250C4A1BB71E5F00F24551 /* AddChildPopoverViewController.m */; };
+		18250C4E1BB71E8600F24551 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18250C4D1BB71E8600F24551 /* HelpViewController.m */; };
 		18FCF4731BA4BBBC00D5504A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF4721BA4BBBC00D5504A /* main.m */; };
 		18FCF4761BA4BBBC00D5504A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF4751BA4BBBC00D5504A /* AppDelegate.m */; };
 		18FCF4791BA4BBBC00D5504A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF4781BA4BBBC00D5504A /* ViewController.m */; };
@@ -90,6 +103,23 @@
 		1811C4111BA6068D006A7DB5 /* RecommendedSizeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendedSizeViewController.h; sourceTree = "<group>"; };
 		1811C4121BA6068D006A7DB5 /* RecommendedSizeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendedSizeViewController.m; sourceTree = "<group>"; };
 		1811C4141BA60840006A7DB5 /* ScanAgain@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScanAgain@2x.png"; sourceTree = "<group>"; };
+		18250C311BB70E7900F24551 /* Boy_AddChild_active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Boy_AddChild_active@2x.png"; sourceTree = "<group>"; };
+		18250C321BB70E7900F24551 /* Boy_AddChild@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Boy_AddChild@2x.png"; sourceTree = "<group>"; };
+		18250C351BB70E8A00F24551 /* Girl_AddChild_active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Girl_AddChild_active@2x.png"; sourceTree = "<group>"; };
+		18250C361BB70E8A00F24551 /* Girl_AddChild@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Girl_AddChild@2x.png"; sourceTree = "<group>"; };
+		18250C391BB7128000F24551 /* Start_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Start_btn@2x.png"; sourceTree = "<group>"; };
+		18250C3B1BB7163F00F24551 /* Step_01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Step_01@2x.png"; sourceTree = "<group>"; };
+		18250C3C1BB7163F00F24551 /* Step_02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Step_02@2x.png"; sourceTree = "<group>"; };
+		18250C3D1BB7163F00F24551 /* Step_03@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Step_03@2x.png"; sourceTree = "<group>"; };
+		18250C411BB71BC400F24551 /* AddBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AddBtn@2x.png"; sourceTree = "<group>"; };
+		18250C431BB71DF700F24551 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		18250C441BB71DF700F24551 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		18250C461BB71E3700F24551 /* HowToScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HowToScanViewController.h; sourceTree = "<group>"; };
+		18250C471BB71E3700F24551 /* HowToScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HowToScanViewController.m; sourceTree = "<group>"; };
+		18250C491BB71E5F00F24551 /* AddChildPopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddChildPopoverViewController.h; sourceTree = "<group>"; };
+		18250C4A1BB71E5F00F24551 /* AddChildPopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddChildPopoverViewController.m; sourceTree = "<group>"; };
+		18250C4C1BB71E8600F24551 /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
+		18250C4D1BB71E8600F24551 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
 		18FCF46D1BA4BBBC00D5504A /* Baby Step.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Baby Step.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FCF4711BA4BBBC00D5504A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18FCF4721BA4BBBC00D5504A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -225,6 +255,14 @@
 				18FCF4B21BA4D8A000D5504A /* FootScanViewController.m */,
 				1811C4111BA6068D006A7DB5 /* RecommendedSizeViewController.h */,
 				1811C4121BA6068D006A7DB5 /* RecommendedSizeViewController.m */,
+				18250C431BB71DF700F24551 /* RegisterViewController.h */,
+				18250C441BB71DF700F24551 /* RegisterViewController.m */,
+				18250C461BB71E3700F24551 /* HowToScanViewController.h */,
+				18250C471BB71E3700F24551 /* HowToScanViewController.m */,
+				18250C491BB71E5F00F24551 /* AddChildPopoverViewController.h */,
+				18250C4A1BB71E5F00F24551 /* AddChildPopoverViewController.m */,
+				18250C4C1BB71E8600F24551 /* HelpViewController.h */,
+				18250C4D1BB71E8600F24551 /* HelpViewController.m */,
 			);
 			path = "Baby Step";
 			sourceTree = "<group>";
@@ -258,6 +296,15 @@
 		18FCF4961BA4BF9A00D5504A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				18250C411BB71BC400F24551 /* AddBtn@2x.png */,
+				18250C3B1BB7163F00F24551 /* Step_01@2x.png */,
+				18250C3C1BB7163F00F24551 /* Step_02@2x.png */,
+				18250C3D1BB7163F00F24551 /* Step_03@2x.png */,
+				18250C391BB7128000F24551 /* Start_btn@2x.png */,
+				18250C351BB70E8A00F24551 /* Girl_AddChild_active@2x.png */,
+				18250C361BB70E8A00F24551 /* Girl_AddChild@2x.png */,
+				18250C311BB70E7900F24551 /* Boy_AddChild_active@2x.png */,
+				18250C321BB70E7900F24551 /* Boy_AddChild@2x.png */,
 				D45623751BA7E9100090C2F6 /* facebook_btn@2x.png */,
 				D45623761BA7E9100090C2F6 /* Register@2x.png */,
 				D45623731BA7E7FE0090C2F6 /* text_field@2x.png */,
@@ -368,17 +415,26 @@
 				D45623791BA7EB560090C2F6 /* HanziPenSC-W3.ttf in Resources */,
 				18FCF49A1BA4C0AD00D5504A /* logo_top@2x.png in Resources */,
 				18FCF4A21BA4C28A00D5504A /* background@2x.png in Resources */,
+				18250C3A1BB7128000F24551 /* Start_btn@2x.png in Resources */,
 				1811C3E61BA600A9006A7DB5 /* Sizes_bg@2x.png in Resources */,
 				18FCF4AF1BA4D5D300D5504A /* foot@2x.png in Resources */,
 				18FCF4A81BA4C7D600D5504A /* shop@2x.png in Resources */,
+				18250C3E1BB7163F00F24551 /* Step_01@2x.png in Resources */,
+				18250C341BB70E7900F24551 /* Boy_AddChild@2x.png in Resources */,
 				18FCF47C1BA4BBBC00D5504A /* Main.storyboard in Resources */,
 				18FCF49F1BA4C1F000D5504A /* mail@2x.png in Resources */,
 				1811C3EE1BA6030E006A7DB5 /* invite_friends_popover@2x.png in Resources */,
+				18250C421BB71BC400F24551 /* AddBtn@2x.png in Resources */,
 				1811C4151BA60840006A7DB5 /* ScanAgain@2x.png in Resources */,
+				18250C381BB70E8A00F24551 /* Girl_AddChild@2x.png in Resources */,
 				18FCF4811BA4BBBC00D5504A /* LaunchScreen.xib in Resources */,
+				18250C331BB70E7900F24551 /* Boy_AddChild_active@2x.png in Resources */,
+				18250C371BB70E8A00F24551 /* Girl_AddChild_active@2x.png in Resources */,
 				D45623741BA7E7FE0090C2F6 /* text_field@2x.png in Resources */,
 				1811C3ED1BA6030E006A7DB5 /* facebook_popover@2x.png in Resources */,
 				1811C3EC1BA6030E006A7DB5 /* Close_popover@2x.png in Resources */,
+				18250C3F1BB7163F00F24551 /* Step_02@2x.png in Resources */,
+				18250C401BB7163F00F24551 /* Step_03@2x.png in Resources */,
 				D45623771BA7E9100090C2F6 /* facebook_btn@2x.png in Resources */,
 				18FCF47E1BA4BBBC00D5504A /* Images.xcassets in Resources */,
 				18FCF49E1BA4C1F000D5504A /* facebook@2x.png in Resources */,
@@ -415,10 +471,14 @@
 				18FCF4731BA4BBBC00D5504A /* main.m in Sources */,
 				1811C4081BA605F2006A7DB5 /* MZAppearance.m in Sources */,
 				1811C4101BA605F2006A7DB5 /* UIViewController+TargetViewController.m in Sources */,
+				18250C4E1BB71E8600F24551 /* HelpViewController.m in Sources */,
 				1811C40A1BA605F2006A7DB5 /* MZFormSheetBackgroundWindow.m in Sources */,
 				1811C40E1BA605F2006A7DB5 /* MZTransition.m in Sources */,
+				18250C481BB71E3700F24551 /* HowToScanViewController.m in Sources */,
 				1811C40F1BA605F2006A7DB5 /* UIImage+Additional.m in Sources */,
+				18250C451BB71DF700F24551 /* RegisterViewController.m in Sources */,
 				18FCF4B31BA4D8A000D5504A /* FootScanViewController.m in Sources */,
+				18250C4B1BB71E5F00F24551 /* AddChildPopoverViewController.m in Sources */,
 				1811C4091BA605F2006A7DB5 /* NSInvocation+Copy.m in Sources */,
 				1811C40C1BA605F2006A7DB5 /* MZFormSheetController.m in Sources */,
 				1811C4131BA6068D006A7DB5 /* RecommendedSizeViewController.m in Sources */,
