@@ -27,6 +27,8 @@
     self.footScanButton.layer.zPosition = 10;
     self.placeFootImgView.layer.zPosition = 10;
     
+    [self.footImgView setHidden:YES];
+    
     isScanStarted = true;
     [NSTimer scheduledTimerWithTimeInterval:20.0 target:self selector:@selector(scanComplete) userInfo:nil repeats:NO];
     self.scanHeadLbl.text = @"Scanning";
@@ -47,6 +49,7 @@
     
     [self.footScanButton setHidden:false];
     [self.placeFootImgView setHidden:true];
+    [self.footImgView setHidden:false];
     
     int i =0;
     for (UITouch* touch in touchArr) {
@@ -95,7 +98,7 @@
             
             // Draw a red circle where the touch occurred
             UIView *touchView = [[UIView alloc] init];
-            [touchView setBackgroundColor:[UIColor redColor]];
+            [touchView setBackgroundColor:[UIColor clearColor]];
             touchView.frame = CGRectMake(touchPoint.x, touchPoint.y, 30, 30);
             touchView.layer.cornerRadius = 15;
             [self.view addSubview:touchView];
@@ -137,11 +140,18 @@
         
         [self.footScanButton setHidden:true];
         [self.placeFootImgView setHidden:false];
+        [self.footImgView setHidden:YES];
         
         
     }
     
     
+    
+}
+
+- (IBAction)backButtonTapped:(id)sender {
+    
+    [self.navigationController popViewControllerAnimated:YES];
     
 }
 

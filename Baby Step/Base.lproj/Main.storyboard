@@ -482,7 +482,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="9ZY-e1-lsC" kind="show" id="OtF-br-nVl"/>
+                                    <action selector="registerButtonTapped:" destination="vUn-nv-kyY" eventType="touchUpInside" id="1CK-n6-jRy"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XpF-Hr-i4f">
@@ -505,7 +505,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="9ZY-e1-lsC" kind="show" id="3tE-Dd-de3"/>
+                                    <action selector="FBButtonTapped:" destination="vUn-nv-kyY" eventType="touchUpInside" id="dUn-ul-fZ4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5VN-dz-5j6">
@@ -566,6 +566,12 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="800" height="1000"/>
+                    <connections>
+                        <outlet property="emailTxtField" destination="ytf-Vm-DOH" id="jrI-9g-C1k"/>
+                        <outlet property="nameTxtField" destination="QEI-dT-WeO" id="SNw-Fh-0xo"/>
+                        <outlet property="passwordTxtField" destination="reG-fr-gtR" id="NFN-RD-kcx"/>
+                        <segue destination="9ZY-e1-lsC" kind="show" identifier="showHowToScanSegue" id="oHM-gx-x5x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ic-ga-TNH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1180,6 +1186,10 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="800" height="1000"/>
+                    <connections>
+                        <outlet property="boyButton" destination="aLm-kW-GUh" id="vvy-aU-hcr"/>
+                        <outlet property="girlButton" destination="QUz-uv-i1w" id="0EM-SW-Aa1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="buD-TO-ZN1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1311,6 +1321,9 @@
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="iN7-lA-iqT" eventType="touchUpInside" id="y76-An-SMx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFf-vP-aEX">
                                 <rect key="frame" x="70" y="962" width="46" height="30"/>
@@ -1842,8 +1855,7 @@
         <image name="twitter_popover.png" width="62" height="62"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="OtF-br-nVl"/>
         <segue reference="igD-zS-rfF"/>
-        <segue reference="lfy-fi-PC4"/>
+        <segue reference="UGx-c8-SZf"/>
     </inferredMetricsTieBreakers>
 </document>

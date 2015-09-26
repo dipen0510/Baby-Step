@@ -39,8 +39,44 @@
 }
 
 - (IBAction)boyButtonTapped:(id)sender {
+    
+    isOptionSelected = 1;
+    [self refreshUIForChildSelection];
+    
 }
 
 - (IBAction)girlButtonTapped:(id)sender {
+    
+    isOptionSelected = 2;
+    [self refreshUIForChildSelection];
+    
 }
+
+- (void) refreshUIForChildSelection {
+    
+    if (isOptionSelected == 1) {
+        
+        [self.boyButton setImage:[UIImage imageNamed:@"Boy_AddChild_active.png"] forState:UIControlStateNormal];
+        [self.girlButton setImage:[UIImage imageNamed:@"Girl_AddChild.png"] forState:UIControlStateNormal];
+        
+    }
+    else if (isOptionSelected == 2) {
+        
+        [self.boyButton setImage:[UIImage imageNamed:@"Boy_AddChild.png"] forState:UIControlStateNormal];
+        [self.girlButton setImage:[UIImage imageNamed:@"Girl_AddChild_active.png"] forState:UIControlStateNormal];
+        
+    }
+    else {
+       
+        [self.boyButton setImage:[UIImage imageNamed:@"Boy_AddChild.png"] forState:UIControlStateNormal];
+        [self.girlButton setImage:[UIImage imageNamed:@"Girl_AddChild.png"] forState:UIControlStateNormal];
+    
+    }
+    
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
+}
+
 @end

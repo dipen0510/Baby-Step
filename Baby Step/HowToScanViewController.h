@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HowToScanViewController : UIViewController
+@interface HowToScanViewController : UIViewController {
+    
+    int isOptionSelected;
+    
+}
+
+@property (weak, nonatomic) IBOutlet UIButton *boyButton;
+@property (weak, nonatomic) IBOutlet UIButton *girlButton;
+
 
 - (IBAction)backButtonTapped:(id)sender;
 - (IBAction)boyButtonTapped:(id)sender;
