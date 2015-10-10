@@ -27,9 +27,12 @@
 @property (weak, nonatomic) IBOutlet UIButton *footScanButton;
 @property (weak, nonatomic) IBOutlet UIImageView *footImgView;
 @property (weak, nonatomic) IBOutlet UILabel *scanHeadLbl;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *footImageHeightConstraint;
 
 - (IBAction)footScanButtonTapped:(id)sender;
 - (IBAction)backButtonTapped:(id)sender;
+- (IBAction)shopForShoesButtonTapped:(id)sender;
+
 
 
 @end

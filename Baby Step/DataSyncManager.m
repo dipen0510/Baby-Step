@@ -69,7 +69,7 @@
                 [delegate didFinishServiceWithSuccess:(NSMutableDictionary *)responseObject andServiceKey:self.serviceKey];
             }
             else {
-                [delegate didFinishServiceWithFailure:@"Unexpected network error"];
+                [delegate didFinishServiceWithFailure:[responseObject valueForKey:@"Message"]];
             }
             
             

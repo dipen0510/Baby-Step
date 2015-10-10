@@ -7,6 +7,8 @@
 //
 
 #import "RegisterViewController.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 @interface RegisterViewController ()
 
@@ -32,13 +34,15 @@
     
     if ([self isFormValid]) {
         
-        [SVProgressHUD showWithStatus:@"Registering. Please Wait" maskType:SVProgressHUDMaskTypeBlack];
+        /*[SVProgressHUD showWithStatus:@"Registering. Please Wait" maskType:SVProgressHUDMaskTypeBlack];
         
         DataSyncManager* syncManager = [[DataSyncManager alloc] init];
         [syncManager setServiceKey:kRegister];
         syncManager.delegate = self;
         
-        [syncManager startPOSTWebServicesWithData:[self prepareDictionaryForRegisterService]];
+        [syncManager startPOSTWebServicesWithData:[self prepareDictionaryForRegisterService]];*/
+        
+        [self performSegueWithIdentifier:@"showHowToScanSegue" sender:nil];
         
     }
     else {
@@ -57,7 +61,25 @@
 }
 
 - (IBAction)FBButtonTapped:(id)sender {
-    [self performSegueWithIdentifier:@"showHowToScanSegue" sender:nil];
+    
+    FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
+    [login
+     logInWithReadPermissions: @[@"public_profile", @"email", @"user_friends"]
+     handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
+         if (error) {
+             NSLog(@"Process error");
+         } else if (result.isCancelled) {
+             NSLog(@"Cancelled");
+         } else {
+             
+             NSLog(@"Logged in");
+             [self performSegueWithIdentifier:@"showHowToScanSegue" sender:nil];
+             
+         }
+     }];
+    
+    
+    
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {

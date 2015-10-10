@@ -1122,6 +1122,9 @@
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="shopForShoesButtonTapped:" destination="9ZY-e1-lsC" eventType="touchUpInside" id="Mfc-09-s1S"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1279,17 +1282,6 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foot.png" translatesAutoresizingMaskIntoConstraints="NO" id="fJm-VY-xPM">
-                                <rect key="frame" x="165" y="265" width="511" height="691"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="691" id="brM-R5-WR3"/>
-                                </constraints>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="brM-R5-WR3"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeU-jL-Snc">
                                 <rect key="frame" x="303" y="763" width="194" height="194"/>
                                 <constraints>
@@ -1351,13 +1343,27 @@
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="shopForShoesButtonTapped:" destination="iN7-lA-iqT" eventType="touchUpInside" id="yKN-rJ-7Z1"/>
+                                </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foot_impression.png" translatesAutoresizingMaskIntoConstraints="NO" id="fJm-VY-xPM">
+                                <rect key="frame" x="184" y="263" width="511" height="691"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="691" id="brM-R5-WR3"/>
+                                </constraints>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="brM-R5-WR3"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="l6p-aM-6bw" firstAttribute="leading" secondItem="tJ4-JS-ZfI" secondAttribute="leadingMargin" id="1R0-1q-b1R"/>
                             <constraint firstItem="5FH-s7-Ghs" firstAttribute="top" secondItem="6oU-7d-bax" secondAttribute="bottom" constant="8" id="3aN-wz-FLi"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="fJm-VY-xPM" secondAttribute="trailing" constant="108" id="4Ah-8e-v9N"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fJm-VY-xPM" secondAttribute="trailing" constant="89" id="4Ah-8e-v9N"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nhz-k4-U3J" secondAttribute="trailing" constant="-16" id="4vf-oD-UUN"/>
                             <constraint firstItem="HM4-iW-dU0" firstAttribute="leading" secondItem="l6p-aM-6bw" secondAttribute="trailing" constant="8" id="5nS-Ct-O54"/>
                             <constraint firstItem="Pe6-2z-Xdl" firstAttribute="leading" secondItem="HM4-iW-dU0" secondAttribute="trailing" constant="8" id="6PF-29-UQ8"/>
@@ -1374,13 +1380,13 @@
                             <constraint firstItem="Pe6-2z-Xdl" firstAttribute="top" secondItem="nUF-Xn-4rs" secondAttribute="bottom" constant="31" id="lIf-aq-2rJ"/>
                             <constraint firstItem="AFf-vP-aEX" firstAttribute="leading" secondItem="6oU-7d-bax" secondAttribute="trailing" constant="8" id="mCb-PU-Rwp"/>
                             <constraint firstItem="lIK-5A-JS1" firstAttribute="top" secondItem="noi-ma-MiA" secondAttribute="bottom" constant="36" id="oFk-3w-LGH"/>
-                            <constraint firstItem="5FH-s7-Ghs" firstAttribute="top" secondItem="fJm-VY-xPM" secondAttribute="bottom" constant="44" id="qfk-Po-3Tz"/>
+                            <constraint firstItem="5FH-s7-Ghs" firstAttribute="top" secondItem="fJm-VY-xPM" secondAttribute="bottom" constant="46" id="qfk-Po-3Tz"/>
                             <constraint firstItem="noi-ma-MiA" firstAttribute="top" secondItem="nUF-Xn-4rs" secondAttribute="bottom" constant="8" id="rwK-vG-Ja6"/>
                             <constraint firstAttribute="centerX" secondItem="4YB-zw-Yf9" secondAttribute="centerX" id="sWL-6a-uW3"/>
                             <constraint firstItem="5FH-s7-Ghs" firstAttribute="top" secondItem="AFf-vP-aEX" secondAttribute="bottom" constant="8" id="vFS-oH-A80"/>
                             <constraint firstItem="5FH-s7-Ghs" firstAttribute="top" secondItem="zeU-jL-Snc" secondAttribute="bottom" constant="43" id="wMM-Zi-JXT"/>
                             <constraint firstItem="nhz-k4-U3J" firstAttribute="leading" secondItem="tJ4-JS-ZfI" secondAttribute="leadingMargin" constant="-16" id="xxG-hl-Acv"/>
-                            <constraint firstItem="fJm-VY-xPM" firstAttribute="leading" secondItem="tJ4-JS-ZfI" secondAttribute="leadingMargin" constant="149" id="zUU-JE-I3m"/>
+                            <constraint firstItem="fJm-VY-xPM" firstAttribute="leading" secondItem="tJ4-JS-ZfI" secondAttribute="leadingMargin" constant="168" id="zUU-JE-I3m"/>
                             <constraint firstItem="5FH-s7-Ghs" firstAttribute="top" secondItem="4aE-xx-CUf" secondAttribute="bottom" constant="8" id="zey-0f-dYY"/>
                         </constraints>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -1417,6 +1423,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="800" height="1000"/>
                     <connections>
+                        <outlet property="footImageHeightConstraint" destination="brM-R5-WR3" id="CZD-HJ-0OI"/>
                         <outlet property="footImgView" destination="fJm-VY-xPM" id="chr-kf-MIr"/>
                         <outlet property="footScanButton" destination="zeU-jL-Snc" id="12D-wb-JbR"/>
                         <outlet property="placeFootImgView" destination="4YB-zw-Yf9" id="uNF-Vf-7JQ"/>
@@ -1842,7 +1849,7 @@
         <image name="facebook.png" width="39" height="40"/>
         <image name="facebook_btn.png" width="298" height="58"/>
         <image name="facebook_popover.png" width="62" height="62"/>
-        <image name="foot.png" width="511" height="691"/>
+        <image name="foot_impression.png" width="355" height="628"/>
         <image name="invite_friends_popover.png" width="62" height="62"/>
         <image name="logo_top.png" width="212" height="85"/>
         <image name="mail.png" width="38" height="38"/>

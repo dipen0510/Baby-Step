@@ -42,5 +42,18 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>fb1888662361359726</string>
+            </array>
+        </dict>
+    </array>
+    <key>FacebookAppID</key>
+    <string>1888662361359726</string>
+    <key>FacebookDisplayName</key>
+    <string>Baby Step</string>
 </dict>
 </plist>

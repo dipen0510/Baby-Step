@@ -21,5 +21,6 @@
 - (IBAction)backButtonTapped:(id)sender;
 - (IBAction)boyButtonTapped:(id)sender;
 - (IBAction)girlButtonTapped:(id)sender;
+- (IBAction)shopForShoesButtonTapped:(id)sender;
 
 @end

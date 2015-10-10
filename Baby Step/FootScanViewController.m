@@ -30,7 +30,7 @@
     [self.footImgView setHidden:YES];
     
     isScanStarted = true;
-    [NSTimer scheduledTimerWithTimeInterval:20.0 target:self selector:@selector(scanComplete) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(scanComplete) userInfo:nil repeats:NO];
     self.scanHeadLbl.text = @"Scanning";
     
 
@@ -75,6 +75,13 @@
     NSLog(@"\n\n\nDIPEN TEST\n\n\n Min - %f\n Max - %f",minY,maxY );
     
     NSLog(@"SIZE is %f",(maxY - minY)*0.026458333*0.1331);
+    
+    if ((self.footScanButton.frame.origin.y + self.footScanButton.frame.size.height - minY) < 691) {
+        self.footImageHeightConstraint.constant = self.footScanButton.frame.origin.y + self.footScanButton.frame.size.height - minY;
+    }
+    else {
+        self.footImageHeightConstraint.constant = 691;
+    }
     
     sizeInCms = (maxY - minY)*0.026458333;
     
@@ -135,7 +142,7 @@
         maxY = 0.0;
         sizeInCms = 0.0;
         
-        [NSTimer scheduledTimerWithTimeInterval:20.0 target:self selector:@selector(scanComplete) userInfo:nil repeats:NO];
+        [NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(scanComplete) userInfo:nil repeats:NO];
         self.scanHeadLbl.text = @"Scanning";
         
         [self.footScanButton setHidden:true];
@@ -153,6 +160,10 @@
     
     [self.navigationController popViewControllerAnimated:YES];
     
+}
+
+- (IBAction)shopForShoesButtonTapped:(id)sender {
+    [[SharedContent sharedInstance] handleShopForButtonTap];
 }
 
 

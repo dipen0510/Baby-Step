@@ -52,6 +52,10 @@
     
 }
 
+- (IBAction)shopForShoesButtonTapped:(id)sender {
+    [[SharedContent sharedInstance] handleShopForButtonTap];
+}
+
 - (void) refreshUIForChildSelection {
     
     if (isOptionSelected == 1) {

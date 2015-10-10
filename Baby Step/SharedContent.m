@@ -22,5 +22,11 @@ static SharedContent *sharedObject = nil;
     return sharedObject;
 }
 
+- (void) handleShopForButtonTap {
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.babyoye.com"]];
+    
+}
+
 
 @end
