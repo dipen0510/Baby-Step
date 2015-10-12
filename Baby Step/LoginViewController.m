@@ -1,20 +1,20 @@
 //
-//  RegisterViewController.m
+//  LoginViewController.m
 //  Baby Step
 //
-//  Created by Dipen Sekhsaria on 27/09/15.
+//  Created by Dipen Sekhsaria on 13/10/15.
 //  Copyright (c) 2015 Dipen Sekhsaria. All rights reserved.
 //
 
-#import "RegisterViewController.h"
+#import "LoginViewController.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 
-@interface RegisterViewController ()
+@interface LoginViewController ()
 
 @end
 
-@implementation RegisterViewController
+@implementation LoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,17 +26,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) startRegisterService {
-    
-    [SVProgressHUD showWithStatus:@"Registering. Please Wait" maskType:SVProgressHUDMaskTypeBlack];
-    
-    DataSyncManager* syncManager = [[DataSyncManager alloc] init];
-    [syncManager setServiceKey:kRegister];
-    syncManager.delegate = self;
-    
-    [syncManager startPOSTWebServicesWithData:[self prepareDictionaryForRegisterService]];
-    
-}
+
 
 - (void) startLoginService {
     
@@ -54,16 +44,13 @@
 
 #pragma mark - ACTION METHODS
 
-- (IBAction)registerButtonTapped:(id)sender {
+- (IBAction)loginButtonTapped:(id)sender {
     
     if ([self isFormValid]) {
         
-        accountTypeId = 5;
-        accountId = self.emailTxtField.text;
-        username = self.nameTxtField.text;
         emailId = self.emailTxtField.text;
         password = self.passwordTxtField.text;
-        [self startRegisterService];
+        [self startLoginService];
         
     }
     else {
@@ -76,7 +63,7 @@
 
 - (IBAction)FBButtonTapped:(id)sender {
     
-    [SVProgressHUD showWithStatus:@"Registering. Please wait" maskType:SVProgressHUDMaskTypeBlack];
+    [SVProgressHUD showWithStatus:@"Loggin in. Please wait" maskType:SVProgressHUDMaskTypeBlack];
     
     FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
     [login
@@ -101,13 +88,10 @@
                           if (!error) {
                               NSLog(@"fetched user:%@", result);
                               
-                              accountTypeId = 1;
-                              accountId = [result valueForKey:@"id"];
-                              username = [result valueForKey:@"name"];
                               emailId = [result valueForKey:@"email"];
                               password = @"";
                               
-                              [self startRegisterService];
+                              [self startLoginService];
                               
                           }
                       }];
@@ -124,10 +108,6 @@
     
 }
 
-- (IBAction)backButtonTapped:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];
 }
@@ -137,31 +117,21 @@
 
 -(void)didFinishServiceWithSuccess:(NSMutableDictionary *)responseData andServiceKey:(NSString *)requestServiceKey {
     
-    
-    if ([requestServiceKey isEqualToString:kRegister]) {
-        
-        NSMutableDictionary* responseDict = [[NSMutableDictionary alloc] initWithDictionary:responseData];
-        NSLog(@"Response: %@)",responseDict);
 
-        [self startLoginService];
-        
-    }
     if ([requestServiceKey isEqualToString:kLogin]) {
         
         NSMutableDictionary* responseDict = [[NSMutableDictionary alloc] initWithDictionary:responseData];
-        NSLog(@"ParentId: %@)",[[responseDict valueForKey:@"ParentInfo"] valueForKey:@"ParentId"]);
-        NSLog(@"Name: %@)",[[responseDict valueForKey:@"ParentInfo"] valueForKey:@"Name"]);
-        NSLog(@"Email: %@)",[[responseDict valueForKey:@"ParentInfo"] valueForKey:@"Email"]);
-        NSLog(@"Children: %@)",[[responseDict valueForKey:@"ParentInfo"] valueForKey:@"Children"]);
+        NSLog(@"Response: %@)",responseDict);
         
         [[SharedContent sharedInstance] setUserId:[[responseDict valueForKey:@"ParentInfo"] valueForKey:@"ParentId"]];
         [[SharedContent sharedInstance] setUsername:[[responseDict valueForKey:@"ParentInfo"] valueForKey:@"Name"]];
         [[SharedContent sharedInstance] setEmailId:[[responseDict valueForKey:@"ParentInfo"] valueForKey:@"Email"]];
         [[SharedContent sharedInstance] setChildArr:[[responseDict valueForKey:@"ParentInfo"] valueForKey:@"Children"]];
         
+        
         [SVProgressHUD dismiss];
-        [SVProgressHUD showSuccessWithStatus:@"Registered Successfully"];
-        [self performSegueWithIdentifier:@"showHowToScanSegue" sender:nil];
+        [SVProgressHUD showSuccessWithStatus:@"Login Success"];
+        [self performSegueWithIdentifier:@"showStartScanSegue" sender:nil];
         
     }
     
@@ -172,17 +142,21 @@
     [SVProgressHUD dismiss];
     
     UIAlertView* alert=[[UIAlertView alloc] initWithTitle:@"Info"
-                                                      message:@"Request timed out, please try again later."
-                                                     delegate:self
-                                            cancelButtonTitle:@"OK"
-                                            otherButtonTitles: nil];
-        
-        if (![errorMsg isEqualToString:@""]) {
-            [alert setMessage:errorMsg];
-        }
-        
-        [alert show];
+                                                  message:@"Request timed out, please try again later."
+                                                 delegate:self
+                                        cancelButtonTitle:@"OK"
+                                        otherButtonTitles: nil];
     
+    if (![errorMsg isEqualToString:@""]) {
+        [alert setMessage:errorMsg];
+    }
+    
+    [alert show];
+    
+}
+
+- (IBAction)backButtonTapped:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 
@@ -196,20 +170,13 @@
 
 - (BOOL) isFormValid {
     
-    NSString* name = self.nameTxtField.text;
     NSString* pass = self.passwordTxtField.text;
     NSString* email = self.emailTxtField.text;
     
-    if (!name || [name isEqualToString:@""] || name.length<2) {
-        return false;
-    }
     
     NSCharacterSet *s = [NSCharacterSet characterSetWithCharactersInString:@"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890@."];
     s = [s invertedSet];
-    NSRange r = [name rangeOfCharacterFromSet:s];
-    if (r.location != NSNotFound) {
-        return false;
-    }
+ 
     
     if (!pass || [pass isEqualToString:@""] || pass.length<3) {
         return false;
@@ -231,18 +198,6 @@
 
 #pragma mark - PREPARE DICTIONARY
 
--(NSMutableDictionary *) prepareDictionaryForRegisterService {
-    
-    NSMutableDictionary * tmpDict = [[NSMutableDictionary alloc] init];
-    
-    [tmpDict setObject:accountId forKey:@"AccountId"];
-    [tmpDict setObject:[NSString stringWithFormat:@"%d",accountTypeId] forKey:@"AccountTypeId"];
-    [tmpDict setObject:emailId forKey:@"Email"];
-    [tmpDict setObject:username forKey:@"Name"];
-    [tmpDict setObject:password forKey:@"Password"];
-
-    return tmpDict;
-}
 
 -(NSMutableDictionary *) prepareDictionaryForLoginService {
     
@@ -256,14 +211,13 @@
 
 
 /*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
+#pragma mark - Navigation
 
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end

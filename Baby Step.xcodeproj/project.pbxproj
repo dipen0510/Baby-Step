@@ -58,8 +58,14 @@
 		18250C961BB7253600F24551 /* SharedContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 18250C941BB7253600F24551 /* SharedContent.m */; };
 		18250C9D1BB72D4700F24551 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18250C9A1BB72D4700F24551 /* SVProgressHUD.bundle */; };
 		18250C9E1BB72D4700F24551 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 18250C9C1BB72D4700F24551 /* SVProgressHUD.m */; };
+		184AB0CE1BCC35DD0013A490 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18521D1A1BC9A7E6001E0392 /* FBSDKCoreKit.framework */; };
+		184AB0D11BCC41470013A490 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184AB0D01BCC41470013A490 /* LoginViewController.m */; };
+		184AB0D31BCC547A0013A490 /* arrow-down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 184AB0D21BCC547A0013A490 /* arrow-down@2x.png */; };
+		184AB0D81BCC55CA0013A490 /* ChildTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 184AB0D61BCC55CA0013A490 /* ChildTableViewCell.m */; };
+		184AB0D91BCC55CA0013A490 /* ChildTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184AB0D71BCC55CA0013A490 /* ChildTableViewCell.xib */; };
+		184AB0DC1BCC57E50013A490 /* add_Child_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 184AB0DA1BCC57E50013A490 /* add_Child_btn@2x.png */; };
+		184AB0DD1BCC57E50013A490 /* Boy_avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 184AB0DB1BCC57E50013A490 /* Boy_avatar@2x.png */; };
 		18521D141BC99D33001E0392 /* foot_impression@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18521D131BC99D33001E0392 /* foot_impression@2x.png */; };
-		18521D1C1BC9A7E6001E0392 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18521D1A1BC9A7E6001E0392 /* FBSDKCoreKit.framework */; };
 		18521D1D1BC9A7E6001E0392 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18521D1B1BC9A7E6001E0392 /* FBSDKLoginKit.framework */; };
 		18FCF4731BA4BBBC00D5504A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF4721BA4BBBC00D5504A /* main.m */; };
 		18FCF4761BA4BBBC00D5504A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF4751BA4BBBC00D5504A /* AppDelegate.m */; };
@@ -190,6 +196,14 @@
 		18250C9A1BB72D4700F24551 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		18250C9B1BB72D4700F24551 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		18250C9C1BB72D4700F24551 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		184AB0CF1BCC41470013A490 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		184AB0D01BCC41470013A490 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		184AB0D21BCC547A0013A490 /* arrow-down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-down@2x.png"; sourceTree = "<group>"; };
+		184AB0D51BCC55CA0013A490 /* ChildTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildTableViewCell.h; sourceTree = "<group>"; };
+		184AB0D61BCC55CA0013A490 /* ChildTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildTableViewCell.m; sourceTree = "<group>"; };
+		184AB0D71BCC55CA0013A490 /* ChildTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildTableViewCell.xib; sourceTree = "<group>"; };
+		184AB0DA1BCC57E50013A490 /* add_Child_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add_Child_btn@2x.png"; sourceTree = "<group>"; };
+		184AB0DB1BCC57E50013A490 /* Boy_avatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Boy_avatar@2x.png"; sourceTree = "<group>"; };
 		18521D131BC99D33001E0392 /* foot_impression@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "foot_impression@2x.png"; sourceTree = "<group>"; };
 		18521D1A1BC9A7E6001E0392 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		18521D1B1BC9A7E6001E0392 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
@@ -230,8 +244,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184AB0CE1BCC35DD0013A490 /* FBSDKCoreKit.framework in Frameworks */,
 				18521D1D1BC9A7E6001E0392 /* FBSDKLoginKit.framework in Frameworks */,
-				18521D1C1BC9A7E6001E0392 /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,11 +315,14 @@
 		18250C4F1BB7235A00F24551 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				184AB0D41BCC55A70013A490 /* Custom Controls */,
 				18250C501BB7238600F24551 /* Popover */,
 				18FCF4771BA4BBBC00D5504A /* ViewController.h */,
 				18FCF4781BA4BBBC00D5504A /* ViewController.m */,
 				18FCF4B11BA4D8A000D5504A /* FootScanViewController.h */,
 				18FCF4B21BA4D8A000D5504A /* FootScanViewController.m */,
+				184AB0CF1BCC41470013A490 /* LoginViewController.h */,
+				184AB0D01BCC41470013A490 /* LoginViewController.m */,
 				18250C431BB71DF700F24551 /* RegisterViewController.h */,
 				18250C441BB71DF700F24551 /* RegisterViewController.m */,
 				18250C461BB71E3700F24551 /* HowToScanViewController.h */,
@@ -401,6 +418,16 @@
 			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
+		184AB0D41BCC55A70013A490 /* Custom Controls */ = {
+			isa = PBXGroup;
+			children = (
+				184AB0D51BCC55CA0013A490 /* ChildTableViewCell.h */,
+				184AB0D61BCC55CA0013A490 /* ChildTableViewCell.m */,
+				184AB0D71BCC55CA0013A490 /* ChildTableViewCell.xib */,
+			);
+			name = "Custom Controls";
+			sourceTree = "<group>";
+		};
 		18521D191BC9A7D9001E0392 /* Facebook */ = {
 			isa = PBXGroup;
 			children = (
@@ -475,6 +502,9 @@
 		18FCF4961BA4BF9A00D5504A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				184AB0DA1BCC57E50013A490 /* add_Child_btn@2x.png */,
+				184AB0DB1BCC57E50013A490 /* Boy_avatar@2x.png */,
+				184AB0D21BCC547A0013A490 /* arrow-down@2x.png */,
 				18521D131BC99D33001E0392 /* foot_impression@2x.png */,
 				18250C411BB71BC400F24551 /* AddBtn@2x.png */,
 				18250C3B1BB7163F00F24551 /* Step_01@2x.png */,
@@ -611,9 +641,11 @@
 				18FCF4811BA4BBBC00D5504A /* LaunchScreen.xib in Resources */,
 				18250C331BB70E7900F24551 /* Boy_AddChild_active@2x.png in Resources */,
 				18250C371BB70E8A00F24551 /* Girl_AddChild_active@2x.png in Resources */,
+				184AB0D31BCC547A0013A490 /* arrow-down@2x.png in Resources */,
 				D45623741BA7E7FE0090C2F6 /* text_field@2x.png in Resources */,
 				18250C9D1BB72D4700F24551 /* SVProgressHUD.bundle in Resources */,
 				1811C3ED1BA6030E006A7DB5 /* facebook_popover@2x.png in Resources */,
+				184AB0D91BCC55CA0013A490 /* ChildTableViewCell.xib in Resources */,
 				1811C3EC1BA6030E006A7DB5 /* Close_popover@2x.png in Resources */,
 				18250C3F1BB7163F00F24551 /* Step_02@2x.png in Resources */,
 				18250C401BB7163F00F24551 /* Step_03@2x.png in Resources */,
@@ -622,6 +654,8 @@
 				18FCF49E1BA4C1F000D5504A /* facebook@2x.png in Resources */,
 				1811C3EF1BA6030E006A7DB5 /* mail_popover@2x.png in Resources */,
 				1811C3F01BA6030E006A7DB5 /* twitter_popover@2x.png in Resources */,
+				184AB0DD1BCC57E50013A490 /* Boy_avatar@2x.png in Resources */,
+				184AB0DC1BCC57E50013A490 /* add_Child_btn@2x.png in Resources */,
 				18FCF4B01BA4D5D300D5504A /* Place_foot@2x.png in Resources */,
 				18FCF4A71BA4C7D500D5504A /* measure@2x.png in Resources */,
 				18FCF4A01BA4C1F000D5504A /* twitter@2x.png in Resources */,
@@ -648,6 +682,7 @@
 			files = (
 				1811C40D1BA605F2006A7DB5 /* MZFormSheetSegue.m in Sources */,
 				18FCF4791BA4BBBC00D5504A /* ViewController.m in Sources */,
+				184AB0D11BCC41470013A490 /* LoginViewController.m in Sources */,
 				18250C7C1BB7250600F24551 /* AFSecurityPolicy.m in Sources */,
 				18250C791BB7250600F24551 /* AFHTTPRequestOperationManager.m in Sources */,
 				18250C781BB7250600F24551 /* AFHTTPRequestOperation.m in Sources */,
@@ -683,6 +718,7 @@
 				1811C4091BA605F2006A7DB5 /* NSInvocation+Copy.m in Sources */,
 				1811C40C1BA605F2006A7DB5 /* MZFormSheetController.m in Sources */,
 				18250C7B1BB7250600F24551 /* AFNetworkReachabilityManager.m in Sources */,
+				184AB0D81BCC55CA0013A490 /* ChildTableViewCell.m in Sources */,
 				1811C4131BA6068D006A7DB5 /* RecommendedSizeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -816,6 +852,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Baby",
 					Step,
+					"$(PROJECT_DIR)/Baby",
+					Step,
 				);
 				GCC_PREFIX_HEADER = "Baby Step/PrefixHeader.pch";
 				INFOPLIST_FILE = "Baby Step/Info.plist";
@@ -835,6 +873,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Swapnil Harkanth (CZA6DXR72T)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Baby",
+					Step,
 					"$(PROJECT_DIR)/Baby",
 					Step,
 				);

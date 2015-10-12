@@ -10,6 +10,7 @@
 
 @implementation SharedContent
 
+@synthesize userId,username,childArr,emailId,didTapBackGroundView;
 
 static SharedContent *sharedObject = nil;
 

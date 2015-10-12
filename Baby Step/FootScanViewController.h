@@ -11,7 +11,7 @@
 #import "MZFormSheetController.h"
 #import "MZFormSheetSegue.h"
 
-@interface FootScanViewController : UIViewController {
+@interface FootScanViewController : UIViewController<UITableViewDataSource,UITableViewDelegate> {
     
     BOOL isScanStarted;
     NSMutableArray* touchViewArr;
@@ -28,10 +28,13 @@
 @property (weak, nonatomic) IBOutlet UIImageView *footImgView;
 @property (weak, nonatomic) IBOutlet UILabel *scanHeadLbl;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *footImageHeightConstraint;
+@property (weak, nonatomic) IBOutlet UITableView *dropDownTblView;
+@property (weak, nonatomic) IBOutlet UIButton *childButton;
 
 - (IBAction)footScanButtonTapped:(id)sender;
 - (IBAction)backButtonTapped:(id)sender;
 - (IBAction)shopForShoesButtonTapped:(id)sender;
+- (IBAction)childButtonTapped:(id)sender;
 
 
 

@@ -7,6 +7,8 @@
 //
 
 #import "FootScanViewController.h"
+#import "ChildTableViewCell.h"
+#import "AddChildPopoverViewController.h"
 
 @interface FootScanViewController ()
 
@@ -34,6 +36,11 @@
     self.scanHeadLbl.text = @"Scanning";
     
 
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.dropDownTblView.tableFooterView = [UIView new];
+    self.dropDownTblView.layer.borderColor = [[UIColor lightGrayColor] CGColor];
+    self.dropDownTblView.layer.borderWidth = 1.0;
+    self.dropDownTblView.layer.cornerRadius = 5.0;
     
 }
 
@@ -166,6 +173,116 @@
     [[SharedContent sharedInstance] handleShopForButtonTap];
 }
 
+- (IBAction)childButtonTapped:(id)sender {
+    
+    if ([self.dropDownTblView isHidden]) {
+        [self showTableView];
+    }
+    else {
+        [self hideTableView];
+    }
+    
+}
+
+
+
+
+#pragma mark - UITableView Datasource -
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    if (![[[SharedContent sharedInstance] childArr] count]) {
+        return 1;
+    }
+    
+    return ([[[SharedContent sharedInstance] childArr] count] + 1);
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSString* identifier = @"ChildCell";
+    ChildTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    
+    if (cell == nil) {
+        NSArray *nib=[[NSBundle mainBundle] loadNibNamed:@"ChildTableViewCell" owner:self options:nil];
+        cell=[nib objectAtIndex:0];
+    }
+    
+    
+    if (![[[SharedContent sharedInstance] childArr] count]) {
+        cell.nameLbl.text = @"Add Child";
+        cell.imgView.image = [UIImage imageNamed:@"add_Child_btn.png"];
+    }
+    else {
+        
+        if (indexPath.row > ([[[SharedContent sharedInstance] childArr] count] - 1)) {
+            
+            cell.nameLbl.text = @"Add Child";
+            cell.imgView.image = [UIImage imageNamed:@"add_Child_btn.png"];
+            
+        }
+        else {
+            
+            cell.nameLbl.text = [[[[SharedContent sharedInstance] childArr] objectAtIndex:indexPath.row] valueForKey:@"Name"];
+            cell.imgView.image = [UIImage imageNamed:@"Boy_avatar.png"];
+            
+        }
+        
+    }
+    
+    return cell;
+    
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 75.0;
+}
+
+#pragma mark - UITableView Delegate -
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
+    [self hideTableView];
+    
+    
+    if (![[[SharedContent sharedInstance] childArr] count]) {
+        [self performSegueWithIdentifier:@"showAddChildSegue" sender:nil];
+    }
+    else {
+        
+        if (indexPath.row > ([[[SharedContent sharedInstance] childArr] count] - 1)) {
+            
+            [self performSegueWithIdentifier:@"showAddChildSegue" sender:nil];
+            
+        }
+        
+    }
+    
+    
+}
+
+
+
+- (void) hideTableView {
+    /*To hide*/
+    [UIView animateWithDuration:0.25 animations:^{
+        [self.dropDownTblView setAlpha:0.0f];
+    } completion:^(BOOL finished) {
+        [self.dropDownTblView setHidden:YES];
+    }];
+}
+
+- (void) showTableView {
+    
+    /*To unhide*/
+    [UIView animateWithDuration:0.25 animations:^{
+        [self.dropDownTblView setAlpha: 1.0f];
+    } completion:^(BOOL finished) {
+        [self.dropDownTblView setHidden:NO];
+    }];
+    
+}
+
 
 #pragma mark - Navigation
 
@@ -204,7 +321,47 @@
         
     }
     
+    if ([[segue identifier] isEqualToString:@"showAddChildSegue"]) {
+
+        
+        MZFormSheetSegue *formSheetSegue = (MZFormSheetSegue *)segue;
+        MZFormSheetController *formSheet = formSheetSegue.formSheetController;
+        formSheet.transitionStyle = MZFormSheetTransitionStyleBounce;
+        formSheet.cornerRadius = 8.0;
+        
+        //NSString *deviceType = [UIDevice currentDevice].model;
+        
+        formSheet.presentedFormSheetSize = CGSizeMake(600, 520);
+        
+        
+        formSheet.didTapOnBackgroundViewCompletionHandler = ^(CGPoint location) {
+            [[SharedContent sharedInstance] setDidTapBackGroundView: true];
+        };
+        
+        formSheet.shadowRadius = 2.0;
+        formSheet.shadowOpacity = 0.3;
+        formSheet.shouldDismissOnBackgroundViewTap = YES;
+        formSheet.shouldCenterVertically = YES;
+        
+        
+        formSheet.didDismissCompletionHandler = ^(UIViewController *presentedFSViewController) {
+            [self handleAddCHildPopupDissmiss];
+        };
+        
+    }
+    
 }
 
+
+- (void) handleAddCHildPopupDissmiss {
+    
+    if (![[SharedContent sharedInstance] didTapBackGroundView]) {
+        
+        [self.dropDownTblView reloadData];
+        
+    }
+    [[SharedContent sharedInstance] setDidTapBackGroundView: false];
+    
+}
 
 @end

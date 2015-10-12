@@ -8,19 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HowToScanViewController : UIViewController {
+@interface HowToScanViewController : UIViewController<DataSyncManagerDelegate> {
     
     int isOptionSelected;
+    NSString* childName;
     
 }
 
 @property (weak, nonatomic) IBOutlet UIButton *boyButton;
 @property (weak, nonatomic) IBOutlet UIButton *girlButton;
+@property (weak, nonatomic) IBOutlet UITextField *childNameTxtField;
 
 
 - (IBAction)backButtonTapped:(id)sender;
 - (IBAction)boyButtonTapped:(id)sender;
 - (IBAction)girlButtonTapped:(id)sender;
 - (IBAction)shopForShoesButtonTapped:(id)sender;
+- (IBAction)startButtonTapped:(id)sender;
 
 @end

@@ -10,8 +10,13 @@
 
 @interface SharedContent : NSObject
 
-+ (id) sharedInstance;
+@property (strong, nonatomic) NSString* userId;
+@property (strong, nonatomic) NSString* username;
+@property (strong, nonatomic) NSMutableArray* childArr;
+@property (strong, nonatomic) NSString* emailId;
+@property BOOL didTapBackGroundView;;
 
++ (id) sharedInstance;
 - (void) handleShopForButtonTap;
 
 @end
