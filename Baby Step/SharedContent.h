@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FBSDKShareKit/FBSDKShareKit.h>
+#import <MessageUI/MessageUI.h>
 
 @interface SharedContent : NSObject
 
@@ -18,5 +20,7 @@
 
 + (id) sharedInstance;
 - (void) handleShopForButtonTap;
+- (FBSDKShareOpenGraphContent* ) prepareFBShareContent;
+- (MFMailComposeViewController *) prepareMailShareContent;
 
 @end

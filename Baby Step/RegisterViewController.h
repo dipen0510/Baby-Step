@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RegisterViewController : UIViewController<DataSyncManagerDelegate> {
+@interface RegisterViewController : UIViewController<DataSyncManagerDelegate,FBSDKSharingDelegate,MFMailComposeViewControllerDelegate> {
     
     NSString* accountId;
     int accountTypeId;
@@ -25,5 +25,8 @@
 - (IBAction)registerButtonTapped:(id)sender;
 - (IBAction)FBButtonTapped:(id)sender;
 - (IBAction)backButtonTapped:(id)sender;
+- (IBAction)fbButtonTapped:(id)sender;
+- (IBAction)twitterButtonTapped:(id)sender;
+- (IBAction)mailButtonTapped:(id)sender;
 
 @end

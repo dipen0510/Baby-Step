@@ -15,5 +15,8 @@
 #import "SharedContent.h"
 #import "DataSyncManager.h"
 #import "SVProgressHUD.h"
+#import <FBSDKShareKit/FBSDKShareKit.h>
+#import <Social/Social.h>
+#import <MessageUI/MessageUI.h>
 
 #endif

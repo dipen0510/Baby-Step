@@ -58,7 +58,6 @@
 		18250C961BB7253600F24551 /* SharedContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 18250C941BB7253600F24551 /* SharedContent.m */; };
 		18250C9D1BB72D4700F24551 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18250C9A1BB72D4700F24551 /* SVProgressHUD.bundle */; };
 		18250C9E1BB72D4700F24551 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 18250C9C1BB72D4700F24551 /* SVProgressHUD.m */; };
-		184AB0CE1BCC35DD0013A490 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18521D1A1BC9A7E6001E0392 /* FBSDKCoreKit.framework */; };
 		184AB0D11BCC41470013A490 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184AB0D01BCC41470013A490 /* LoginViewController.m */; };
 		184AB0D31BCC547A0013A490 /* arrow-down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 184AB0D21BCC547A0013A490 /* arrow-down@2x.png */; };
 		184AB0D81BCC55CA0013A490 /* ChildTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 184AB0D61BCC55CA0013A490 /* ChildTableViewCell.m */; };
@@ -67,6 +66,9 @@
 		184AB0DD1BCC57E50013A490 /* Boy_avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 184AB0DB1BCC57E50013A490 /* Boy_avatar@2x.png */; };
 		18521D141BC99D33001E0392 /* foot_impression@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18521D131BC99D33001E0392 /* foot_impression@2x.png */; };
 		18521D1D1BC9A7E6001E0392 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18521D1B1BC9A7E6001E0392 /* FBSDKLoginKit.framework */; };
+		18921AD01BDC13C2005FDD58 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18521D1A1BC9A7E6001E0392 /* FBSDKCoreKit.framework */; };
+		18921AD91BDC379A005FDD58 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18921AD81BDC379A005FDD58 /* FBSDKShareKit.framework */; };
+		18921ADB1BDC482F005FDD58 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18921ADA1BDC482E005FDD58 /* Social.framework */; };
 		18FCF4731BA4BBBC00D5504A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF4721BA4BBBC00D5504A /* main.m */; };
 		18FCF4761BA4BBBC00D5504A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF4751BA4BBBC00D5504A /* AppDelegate.m */; };
 		18FCF4791BA4BBBC00D5504A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF4781BA4BBBC00D5504A /* ViewController.m */; };
@@ -207,6 +209,8 @@
 		18521D131BC99D33001E0392 /* foot_impression@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "foot_impression@2x.png"; sourceTree = "<group>"; };
 		18521D1A1BC9A7E6001E0392 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		18521D1B1BC9A7E6001E0392 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		18921AD81BDC379A005FDD58 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		18921ADA1BDC482E005FDD58 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		18FCF46D1BA4BBBC00D5504A /* Baby Step.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Baby Step.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FCF4711BA4BBBC00D5504A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18FCF4721BA4BBBC00D5504A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -244,7 +248,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				184AB0CE1BCC35DD0013A490 /* FBSDKCoreKit.framework in Frameworks */,
+				18921ADB1BDC482F005FDD58 /* Social.framework in Frameworks */,
+				18921AD91BDC379A005FDD58 /* FBSDKShareKit.framework in Frameworks */,
+				18921AD01BDC13C2005FDD58 /* FBSDKCoreKit.framework in Frameworks */,
 				18521D1D1BC9A7E6001E0392 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,6 +268,7 @@
 		1811C3F11BA605DD006A7DB5 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				18921ADA1BDC482E005FDD58 /* Social.framework */,
 				18521D191BC9A7D9001E0392 /* Facebook */,
 				18250C981BB72D4700F24551 /* SVProgressHUD */,
 				18250C521BB7250600F24551 /* AFNetworking */,
@@ -431,6 +438,7 @@
 		18521D191BC9A7D9001E0392 /* Facebook */ = {
 			isa = PBXGroup;
 			children = (
+				18921AD81BDC379A005FDD58 /* FBSDKShareKit.framework */,
 				18521D1A1BC9A7E6001E0392 /* FBSDKCoreKit.framework */,
 				18521D1B1BC9A7E6001E0392 /* FBSDKLoginKit.framework */,
 			);
@@ -854,15 +862,19 @@
 					Step,
 					"$(PROJECT_DIR)/Baby",
 					Step,
+					"$(PROJECT_DIR)/Baby",
+					Step,
 				);
 				GCC_PREFIX_HEADER = "Baby Step/PrefixHeader.pch";
 				INFOPLIST_FILE = "Baby Step/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "534e4386-dbd1-442f-8cce-668b55f16962";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7 armv7s armv64";
 			};
 			name = Debug;
 		};
@@ -877,15 +889,19 @@
 					Step,
 					"$(PROJECT_DIR)/Baby",
 					Step,
+					"$(PROJECT_DIR)/Baby",
+					Step,
 				);
 				GCC_PREFIX_HEADER = "Baby Step/PrefixHeader.pch";
 				INFOPLIST_FILE = "Baby Step/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "534e4386-dbd1-442f-8cce-668b55f16962";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7 armv7s armv64";
 			};
 			name = Release;
 		};

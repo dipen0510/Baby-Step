@@ -33,6 +33,7 @@
             <string>HanziPenSC-W3</string>
             <string>HanziPenSC-W3</string>
             <string>HanziPenSC-W3</string>
+            <string>HanziPenSC-W3</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -75,6 +76,9 @@
                                         <include reference="XOd-EM-D19"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="fbButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1KK-PT-lGo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VhR-Wn-p8b">
                                 <rect key="frame" x="63" y="51" width="39" height="40"/>
@@ -89,6 +93,9 @@
                                         <include reference="N8R-1k-Acc"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="twitterButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NaK-t0-5v1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gy-yW-owz">
                                 <rect key="frame" x="110" y="51" width="38" height="39"/>
@@ -103,6 +110,9 @@
                                         <include reference="rTM-TG-oZ2"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="mailButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sCn-fy-whK"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It just takes a few seconds to accurately measure your child's foot and shop a wide selection of shoes." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FA3-Qg-glf">
                                 <rect key="frame" x="128" y="211" width="544" height="160"/>
@@ -120,45 +130,6 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="measure.png" translatesAutoresizingMaskIntoConstraints="NO" id="kBK-zD-t9e">
-                                <rect key="frame" x="49" y="420" width="160" height="160"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="HbF-A3-Q71"/>
-                                    <constraint firstAttribute="height" constant="160" id="Ls7-TM-mB2"/>
-                                </constraints>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="HbF-A3-Q71"/>
-                                        <include reference="Ls7-TM-mB2"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="size.png" translatesAutoresizingMaskIntoConstraints="NO" id="uQ6-zb-IG5">
-                                <rect key="frame" x="320" y="420" width="160" height="160"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="160" id="CDn-uG-1cA"/>
-                                    <constraint firstAttribute="width" constant="160" id="VPZ-US-g2S"/>
-                                </constraints>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="CDn-uG-1cA"/>
-                                        <include reference="VPZ-US-g2S"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shop.png" translatesAutoresizingMaskIntoConstraints="NO" id="zmm-LN-ZS9">
-                                <rect key="frame" x="591" y="420" width="160" height="160"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="B6i-T8-jfL"/>
-                                    <constraint firstAttribute="height" constant="160" id="zji-A4-PBk"/>
-                                </constraints>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="B6i-T8-jfL"/>
-                                        <include reference="zji-A4-PBk"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ApC-s7-4Ry">
                                 <rect key="frame" x="236" y="846" width="329" height="58"/>
                                 <constraints>
@@ -249,48 +220,84 @@
                                     <segue destination="Y3K-Vi-Kmb" kind="show" id="qqW-lw-Ivj"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BdA-HU-hyD">
+                                <rect key="frame" x="49" y="420" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="FKA-4J-tp0"/>
+                                    <constraint firstAttribute="width" constant="160" id="gNz-hc-csY"/>
+                                </constraints>
+                                <state key="normal" image="measure.png">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="9p6-w3-Q6M" kind="presentation" id="gL4-pA-Z4T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Os2-AY-qR9">
+                                <rect key="frame" x="320" y="420" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="UQh-91-raa"/>
+                                    <constraint firstAttribute="height" constant="160" id="UlS-Be-IFc"/>
+                                </constraints>
+                                <state key="normal" image="size.png">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getAccurateSizeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zdU-1E-COs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDh-j8-s4D">
+                                <rect key="frame" x="591" y="420" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="3Og-sH-w8j"/>
+                                    <constraint firstAttribute="height" constant="160" id="ToS-gR-SH0"/>
+                                </constraints>
+                                <state key="normal" image="shop.png">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shopForShoesButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GAn-3f-0Ml"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BHU-IY-IM4" secondAttribute="bottom" constant="31" id="1lR-6T-ygb"/>
                             <constraint firstAttribute="centerX" secondItem="EzT-Fq-srE" secondAttribute="centerX" id="2D1-QP-7gK"/>
+                            <constraint firstItem="Os2-AY-qR9" firstAttribute="top" secondItem="FA3-Qg-glf" secondAttribute="bottom" constant="49" id="3Z4-XX-tLr"/>
                             <constraint firstItem="258-4p-Gdd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="8UH-5j-Wfp"/>
                             <constraint firstAttribute="centerX" secondItem="MdX-UX-drt" secondAttribute="centerX" id="FmQ-e0-fS9"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="258-4p-Gdd" secondAttribute="bottom" id="HoG-o5-SxQ"/>
                             <constraint firstAttribute="centerX" secondItem="ApC-s7-4Ry" secondAttribute="centerX" id="J4c-Lq-ZhT"/>
                             <constraint firstItem="258-4p-Gdd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="JkJ-XD-05v"/>
+                            <constraint firstItem="BdA-HU-hyD" firstAttribute="top" secondItem="FA3-Qg-glf" secondAttribute="bottom" constant="49" id="K24-1x-T1U"/>
                             <constraint firstItem="FA3-Qg-glf" firstAttribute="top" secondItem="MdX-UX-drt" secondAttribute="bottom" constant="97" id="MIs-Xh-CKS">
                                 <variation key="heightClass=regular-widthClass=regular" constant="117"/>
                             </constraint>
-                            <constraint firstItem="NwW-Os-41A" firstAttribute="top" secondItem="zmm-LN-ZS9" secondAttribute="bottom" constant="8" id="Mep-F8-Gny"/>
                             <constraint firstItem="5gy-yW-owz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="31" id="NPC-lU-2Z1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SDh-j8-s4D" secondAttribute="trailing" constant="33" id="OWH-t8-9E9"/>
                             <constraint firstItem="BHU-IY-IM4" firstAttribute="top" secondItem="ApC-s7-4Ry" secondAttribute="bottom" constant="21" id="Rjt-jx-o2r"/>
                             <constraint firstItem="5gy-yW-owz" firstAttribute="leading" secondItem="VhR-Wn-p8b" secondAttribute="trailing" constant="8" id="SbT-fH-kUF"/>
-                            <constraint firstAttribute="centerX" secondItem="uQ6-zb-IG5" secondAttribute="centerX" id="U35-Ha-BD3"/>
+                            <constraint firstAttribute="centerX" secondItem="Os2-AY-qR9" secondAttribute="centerX" id="ShQ-UE-Ogw"/>
+                            <constraint firstItem="BdA-HU-hyD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="33" id="Zpb-7W-cuK"/>
                             <constraint firstItem="jHi-9B-SEL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="63" id="ags-lo-3Ih">
                                 <variation key="heightClass=regular-widthClass=regular" constant="70"/>
                             </constraint>
-                            <constraint firstItem="uQ6-zb-IG5" firstAttribute="top" secondItem="FA3-Qg-glf" secondAttribute="bottom" constant="49" id="goT-XU-Aeu">
-                                <variation key="heightClass=regular-widthClass=regular" constant="109"/>
-                            </constraint>
+                            <constraint firstItem="SDh-j8-s4D" firstAttribute="top" secondItem="FA3-Qg-glf" secondAttribute="bottom" constant="49" id="dHK-bZ-nJA"/>
+                            <constraint firstItem="EzT-Fq-srE" firstAttribute="top" secondItem="Os2-AY-qR9" secondAttribute="bottom" constant="8" id="iY6-bf-gm0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NwW-Os-41A" secondAttribute="trailing" constant="53" id="jXR-A1-33b"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="zmm-LN-ZS9" secondAttribute="trailing" constant="33" id="lDF-7h-VIR"/>
                             <constraint firstItem="sEB-z4-bA1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="31" id="lME-Vs-Xp9"/>
-                            <constraint firstItem="EzT-Fq-srE" firstAttribute="top" secondItem="uQ6-zb-IG5" secondAttribute="bottom" constant="8" id="lft-i6-f01"/>
+                            <constraint firstItem="NwW-Os-41A" firstAttribute="top" secondItem="SDh-j8-s4D" secondAttribute="bottom" constant="8" id="ld1-Ak-dV9"/>
                             <constraint firstAttribute="centerX" secondItem="FA3-Qg-glf" secondAttribute="centerX" id="mRb-VJ-yv5"/>
-                            <constraint firstItem="kBK-zD-t9e" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="33" id="pG5-BS-knM"/>
-                            <constraint firstItem="jHi-9B-SEL" firstAttribute="top" secondItem="kBK-zD-t9e" secondAttribute="bottom" constant="8" id="pgF-fD-ux8"/>
                             <constraint firstAttribute="centerX" secondItem="BHU-IY-IM4" secondAttribute="centerX" id="qSi-EC-WVx"/>
                             <constraint firstItem="MdX-UX-drt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="qiZ-iI-p5A"/>
-                            <constraint firstItem="kBK-zD-t9e" firstAttribute="top" secondItem="FA3-Qg-glf" secondAttribute="bottom" constant="49" id="rsn-oo-EeE">
-                                <variation key="heightClass=regular-widthClass=regular" constant="109"/>
-                            </constraint>
                             <constraint firstItem="VhR-Wn-p8b" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="31" id="tRA-HN-DCJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="258-4p-Gdd" secondAttribute="trailing" constant="-16" id="vcJ-bW-0MM"/>
                             <constraint firstItem="sEB-z4-bA1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="vsE-Vr-d7k"/>
-                            <constraint firstItem="zmm-LN-ZS9" firstAttribute="top" secondItem="FA3-Qg-glf" secondAttribute="bottom" constant="49" id="ysH-Kv-45B">
-                                <variation key="heightClass=regular-widthClass=regular" constant="109"/>
-                            </constraint>
+                            <constraint firstItem="jHi-9B-SEL" firstAttribute="top" secondItem="BdA-HU-hyD" secondAttribute="bottom" constant="8" id="zJy-Yc-iQu"/>
                             <constraint firstItem="VhR-Wn-p8b" firstAttribute="leading" secondItem="sEB-z4-bA1" secondAttribute="trailing" constant="8" id="zOn-Ab-vVs"/>
                         </constraints>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -301,9 +308,6 @@
                                 <include reference="VhR-Wn-p8b"/>
                                 <include reference="5gy-yW-owz"/>
                                 <include reference="FA3-Qg-glf"/>
-                                <include reference="kBK-zD-t9e"/>
-                                <include reference="uQ6-zb-IG5"/>
-                                <include reference="zmm-LN-ZS9"/>
                                 <include reference="ApC-s7-4Ry"/>
                                 <include reference="EzT-Fq-srE"/>
                                 <include reference="jHi-9B-SEL"/>
@@ -324,23 +328,14 @@
                                 <include reference="mRb-VJ-yv5"/>
                                 <include reference="FmQ-e0-fS9"/>
                                 <include reference="qiZ-iI-p5A"/>
-                                <include reference="pG5-BS-knM"/>
-                                <include reference="rsn-oo-EeE"/>
-                                <include reference="U35-Ha-BD3"/>
-                                <include reference="goT-XU-Aeu"/>
                                 <include reference="ags-lo-3Ih"/>
-                                <include reference="pgF-fD-ux8"/>
                                 <include reference="2D1-QP-7gK"/>
-                                <include reference="lft-i6-f01"/>
-                                <include reference="lDF-7h-VIR"/>
-                                <include reference="ysH-Kv-45B"/>
-                                <include reference="Mep-F8-Gny"/>
                                 <include reference="jXR-A1-33b"/>
                                 <include reference="J4c-Lq-ZhT"/>
-                                <include reference="1lR-6T-ygb"/>
-                                <include reference="HoG-o5-SxQ"/>
                                 <include reference="Rjt-jx-o2r"/>
                                 <include reference="qSi-EC-WVx"/>
+                                <include reference="1lR-6T-ygb"/>
+                                <include reference="HoG-o5-SxQ"/>
                             </mask>
                         </variation>
                     </view>
@@ -353,6 +348,7 @@
                         <outlet property="mainContentLbl" destination="FA3-Qg-glf" id="orD-Hy-ayB"/>
                         <outlet property="measureLbl" destination="jHi-9B-SEL" id="Swl-QG-UNs"/>
                         <outlet property="shopLbl" destination="NwW-Os-41A" id="pOv-3R-PhO"/>
+                        <segue destination="iN7-lA-iqT" kind="show" identifier="showStartScanSegue" id="Oej-KG-ktO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -399,6 +395,9 @@
                                         <include reference="gGc-cq-4bv"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="fbButtonTapped:" destination="vUn-nv-kyY" eventType="touchUpInside" id="Fcf-54-3iY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ws8-lg-D74">
                                 <rect key="frame" x="63" y="51" width="39" height="40"/>
@@ -419,6 +418,9 @@
                                         <include reference="9Ul-o2-uak"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="twitterButtonTapped:" destination="vUn-nv-kyY" eventType="touchUpInside" id="5we-Q9-cFy"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3BN-C1-a0y">
                                 <rect key="frame" x="221" y="152" width="359" height="72"/>
@@ -521,6 +523,9 @@
                                 <state key="normal" image="mail.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="mailButtonTapped:" destination="vUn-nv-kyY" eventType="touchUpInside" id="fPT-Gy-wsg"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnI-60-Gsv">
                                 <rect key="frame" x="183" y="286" width="58" height="21"/>
@@ -693,12 +698,18 @@
                                         <include reference="y1R-R1-DlE"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="fbButtonTapped:" destination="9p6-w3-Q6M" eventType="touchUpInside" id="TYo-Fx-T4n"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOC-SF-YcK">
                                 <rect key="frame" x="63" y="51" width="38" height="38"/>
                                 <state key="normal" image="mail.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="mailButtonTapped:" destination="9p6-w3-Q6M" eventType="touchUpInside" id="bwq-wm-Igh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kyi-LD-DjN">
                                 <rect key="frame" x="109" y="51" width="38" height="40"/>
@@ -718,6 +729,9 @@
                                         <include reference="G6v-Qb-8tL"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="twitterButtonTapped:" destination="9p6-w3-Q6M" eventType="touchUpInside" id="TE9-Oy-c8w"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Step_02.png" translatesAutoresizingMaskIntoConstraints="NO" id="OON-OU-cdt">
                                 <rect key="frame" x="346" y="202" width="108" height="110"/>
@@ -761,7 +775,7 @@
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <mutableString key="content">Every parent knows what it takes to get right shoe for the child when he/she is running around with or without shoes, bringing down the store making it look like cumbersome task. What my parents did to get us the correct size shoes is they measured my foot size on a piece of paper and took it the shop for me and my sister. We are making the task easier! The importance of right fitting shoes is necessary for healthy foot development- for your kid to be able to run, walk and rise with those small Babysteps. Now, one can get the correct size while shopping online. When we are looking to buy shoes online, it is a pleasure to buy the accurate pair with the help of touch of a screen. This app allows you to shop online from a wide collection of shoes which is just a scan away.</mutableString>
+                                        <string key="content">Every parent knows what it takes to get right shoe for the child when he/she is running around with or without shoes, bringing down the store making it look like cumbersome task. What my parents did to get us the correct size shoes is they measured my foot size on a piece of paper and took it the shop for me and my sister. We are making the task easier! The importance of right fitting shoes is necessary for healthy foot development- for your kid to be able to run, walk and rise with those small Babysteps. Now, one can get the correct size while shopping online. When we are looking to buy shoes online, it is a pleasure to buy the accurate pair with the help of touch of a screen. This app allows you to shop online from a wide collection of shoes which is just a scan away.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.33597695709999997" green="0.33597695709999997" blue="0.33597695709999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="18" name="HelveticaNeue"/>
@@ -917,6 +931,9 @@
                                         <include reference="IQz-RZ-z6x"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="fbButtonTapped:" destination="9ZY-e1-lsC" eventType="touchUpInside" id="u0H-PM-6lN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qI2-8J-oge">
                                 <rect key="frame" x="63" y="51" width="38" height="40"/>
@@ -926,6 +943,9 @@
                                 <state key="normal" image="mail.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="mailButtonTapped:" destination="9ZY-e1-lsC" eventType="touchUpInside" id="Pwi-8C-PgN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TgS-sF-3mM">
                                 <rect key="frame" x="109" y="51" width="39" height="40"/>
@@ -946,6 +966,9 @@
                                         <include reference="RCg-Df-aeB"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="twitterButtonTapped:" destination="9ZY-e1-lsC" eventType="touchUpInside" id="Bbx-Oh-JPN"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hold the ipad in front of the foot" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3D-3x-8SL">
                                 <rect key="frame" x="194" y="256" width="412" height="47"/>
@@ -1237,6 +1260,9 @@
                                         <include reference="QD4-kZ-z9X"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="fbButtonTapped:" destination="iN7-lA-iqT" eventType="touchUpInside" id="vvR-gJ-4y2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HM4-iW-dU0">
                                 <rect key="frame" x="63" y="51" width="39" height="40"/>
@@ -1251,6 +1277,9 @@
                                         <include reference="vMv-Uk-nSC"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="twitterButtonTapped:" destination="iN7-lA-iqT" eventType="touchUpInside" id="fo2-pQ-0Ys"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pe6-2z-Xdl">
                                 <rect key="frame" x="110" y="51" width="38" height="39"/>
@@ -1265,6 +1294,9 @@
                                         <include reference="W5V-4I-8vo"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="mailButtonTapped:" destination="iN7-lA-iqT" eventType="touchUpInside" id="EBU-bC-fPx"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scanning" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIK-5A-JS1">
                                 <rect key="frame" x="226" y="150" width="349" height="50"/>
@@ -1358,20 +1390,8 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ltk-by-Yjy">
-                                <rect key="frame" x="464" y="122" width="260" height="150"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="C3m-Fn-wz2"/>
-                                    <constraint firstAttribute="width" constant="260" id="NCu-6O-x9W"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="dataSource" destination="iN7-lA-iqT" id="cq9-kg-WNb"/>
-                                    <outlet property="delegate" destination="iN7-lA-iqT" id="5YU-oL-UAF"/>
-                                </connections>
-                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PsV-sN-WV7">
-                                <rect key="frame" x="649" y="84" width="93" height="34"/>
+                                <rect key="frame" x="576" y="80" width="93" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="hZW-gW-Re3"/>
                                     <constraint firstAttribute="width" constant="93" id="knH-RC-CqL"/>
@@ -1387,21 +1407,52 @@
                                     <action selector="childButtonTapped:" destination="iN7-lA-iqT" eventType="touchUpInside" id="GfT-6B-l9D"/>
                                 </connections>
                             </button>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ltk-by-Yjy">
+                                <rect key="frame" x="396" y="122" width="260" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="C3m-Fn-wz2"/>
+                                    <constraint firstAttribute="width" constant="260" id="NCu-6O-x9W"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="iN7-lA-iqT" id="cq9-kg-WNb"/>
+                                    <outlet property="delegate" destination="iN7-lA-iqT" id="5YU-oL-UAF"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3q-hU-Wzh">
+                                <rect key="frame" x="670" y="80" width="130" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="URY-I6-iWc"/>
+                                    <constraint firstAttribute="width" constant="130" id="VYR-f2-fFa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HanziPenSC-W3" family="翩翩體-簡" pointSize="24"/>
+                                <inset key="titleEdgeInsets" minX="-40" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="105" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Add Child" image="add_Child_btn.png">
+                                    <color key="titleColor" red="0.33597695709999997" green="0.33597695709999997" blue="0.33597695709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addChildButtonTapped:" destination="iN7-lA-iqT" eventType="touchUpInside" id="Xrs-Nk-CpL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="l6p-aM-6bw" firstAttribute="leading" secondItem="tJ4-JS-ZfI" secondAttribute="leadingMargin" id="1R0-1q-b1R"/>
                             <constraint firstItem="5FH-s7-Ghs" firstAttribute="top" secondItem="6oU-7d-bax" secondAttribute="bottom" constant="8" id="3aN-wz-FLi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fJm-VY-xPM" secondAttribute="trailing" constant="89" id="4Ah-8e-v9N"/>
-                            <constraint firstItem="PsV-sN-WV7" firstAttribute="top" secondItem="nUF-Xn-4rs" secondAttribute="bottom" constant="64" id="4Q4-OP-DrQ"/>
+                            <constraint firstItem="PsV-sN-WV7" firstAttribute="top" secondItem="nUF-Xn-4rs" secondAttribute="bottom" constant="60" id="4Q4-OP-DrQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nhz-k4-U3J" secondAttribute="trailing" constant="-16" id="4vf-oD-UUN"/>
                             <constraint firstItem="HM4-iW-dU0" firstAttribute="leading" secondItem="l6p-aM-6bw" secondAttribute="trailing" constant="8" id="5nS-Ct-O54"/>
                             <constraint firstItem="Pe6-2z-Xdl" firstAttribute="leading" secondItem="HM4-iW-dU0" secondAttribute="trailing" constant="8" id="6PF-29-UQ8"/>
                             <constraint firstItem="6oU-7d-bax" firstAttribute="leading" secondItem="tJ4-JS-ZfI" secondAttribute="leadingMargin" id="7Ln-LJ-2wI"/>
                             <constraint firstItem="5FH-s7-Ghs" firstAttribute="top" secondItem="4YB-zw-Yf9" secondAttribute="bottom" constant="43" id="DlX-2S-mhh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ltk-by-Yjy" secondAttribute="trailing" constant="60" id="IHm-W1-w4P"/>
+                            <constraint firstItem="K3q-hU-Wzh" firstAttribute="top" secondItem="nUF-Xn-4rs" secondAttribute="bottom" constant="60" id="F9I-RD-eLV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ltk-by-Yjy" secondAttribute="trailing" constant="128" id="IHm-W1-w4P"/>
                             <constraint firstItem="5FH-s7-Ghs" firstAttribute="top" secondItem="nhz-k4-U3J" secondAttribute="bottom" id="KOm-TE-DjA"/>
-                            <constraint firstItem="ltk-by-Yjy" firstAttribute="top" secondItem="PsV-sN-WV7" secondAttribute="bottom" constant="4" id="KqE-vt-av3"/>
+                            <constraint firstItem="ltk-by-Yjy" firstAttribute="top" secondItem="PsV-sN-WV7" secondAttribute="bottom" constant="8" id="KqE-vt-av3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="K3q-hU-Wzh" secondAttribute="trailing" constant="-16" id="OQn-Sl-Il2"/>
                             <constraint firstItem="4aE-xx-CUf" firstAttribute="trailing" secondItem="tJ4-JS-ZfI" secondAttribute="trailingMargin" id="Pc9-HX-voN"/>
                             <constraint firstItem="HM4-iW-dU0" firstAttribute="top" secondItem="nUF-Xn-4rs" secondAttribute="bottom" constant="31" id="TjV-W9-0y5"/>
                             <constraint firstAttribute="centerX" secondItem="zeU-jL-Snc" secondAttribute="centerX" id="Zgk-Qk-MVt"/>
@@ -1417,7 +1468,7 @@
                             <constraint firstAttribute="centerX" secondItem="4YB-zw-Yf9" secondAttribute="centerX" id="sWL-6a-uW3"/>
                             <constraint firstItem="5FH-s7-Ghs" firstAttribute="top" secondItem="AFf-vP-aEX" secondAttribute="bottom" constant="8" id="vFS-oH-A80"/>
                             <constraint firstItem="5FH-s7-Ghs" firstAttribute="top" secondItem="zeU-jL-Snc" secondAttribute="bottom" constant="43" id="wMM-Zi-JXT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="PsV-sN-WV7" secondAttribute="trailing" constant="42" id="wm7-F8-jhE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PsV-sN-WV7" secondAttribute="trailing" constant="115" id="wm7-F8-jhE"/>
                             <constraint firstItem="nhz-k4-U3J" firstAttribute="leading" secondItem="tJ4-JS-ZfI" secondAttribute="leadingMargin" constant="-16" id="xxG-hl-Acv"/>
                             <constraint firstItem="fJm-VY-xPM" firstAttribute="leading" secondItem="tJ4-JS-ZfI" secondAttribute="leadingMargin" constant="168" id="zUU-JE-I3m"/>
                             <constraint firstItem="5FH-s7-Ghs" firstAttribute="top" secondItem="4aE-xx-CUf" secondAttribute="bottom" constant="8" id="zey-0f-dYY"/>
@@ -1923,6 +1974,9 @@
                                         <include reference="vFS-v8-dpl"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="fbButtonTapped:" destination="Y3K-Vi-Kmb" eventType="touchUpInside" id="Ml3-d5-q7G"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFw-bB-v4i">
                                 <rect key="frame" x="63" y="51" width="39" height="40"/>
@@ -1943,6 +1997,9 @@
                                         <include reference="p5d-Ww-MTt"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="twitterButtonTapped:" destination="Y3K-Vi-Kmb" eventType="touchUpInside" id="pPh-9T-VCZ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login existing Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2u-fv-e9a">
                                 <rect key="frame" x="206" y="152" width="389" height="72"/>
@@ -2036,6 +2093,9 @@
                                 <state key="normal" image="mail.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="mailButtonTapped:" destination="Y3K-Vi-Kmb" eventType="touchUpInside" id="SHN-Gf-N2L"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdt-Ou-J6E">
                                 <rect key="frame" x="16" y="950" width="46" height="30"/>
@@ -2114,6 +2174,7 @@
         <image name="Step_01.png" width="108" height="110"/>
         <image name="Step_02.png" width="108" height="110"/>
         <image name="Step_03.png" width="108" height="110"/>
+        <image name="add_Child_btn.png" width="11" height="11"/>
         <image name="arrow-down.png" width="15" height="9"/>
         <image name="background.png" width="768" height="1024"/>
         <image name="facebook.png" width="39" height="40"/>
@@ -2132,7 +2193,7 @@
         <image name="twitter_popover.png" width="62" height="62"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Kwa-Be-Ncn"/>
+        <segue reference="Oej-KG-ktO"/>
         <segue reference="UGx-c8-SZf"/>
     </inferredMetricsTieBreakers>
 </document>

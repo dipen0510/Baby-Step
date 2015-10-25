@@ -11,7 +11,7 @@
 #import "MZFormSheetController.h"
 #import "MZFormSheetSegue.h"
 
-@interface FootScanViewController : UIViewController<UITableViewDataSource,UITableViewDelegate> {
+@interface FootScanViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,FBSDKSharingDelegate,MFMailComposeViewControllerDelegate> {
     
     BOOL isScanStarted;
     NSMutableArray* touchViewArr;
@@ -35,7 +35,10 @@
 - (IBAction)backButtonTapped:(id)sender;
 - (IBAction)shopForShoesButtonTapped:(id)sender;
 - (IBAction)childButtonTapped:(id)sender;
-
+- (IBAction)fbButtonTapped:(id)sender;
+- (IBAction)twitterButtonTapped:(id)sender;
+- (IBAction)mailButtonTapped:(id)sender;
+- (IBAction)addChildButtonTapped:(id)sender;
 
 
 @end

@@ -8,12 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<FBSDKSharingDelegate,MFMailComposeViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *mainContentLbl;
 @property (weak, nonatomic) IBOutlet UILabel *measureLbl;
 @property (weak, nonatomic) IBOutlet UILabel *getSizeLbl;
 @property (weak, nonatomic) IBOutlet UILabel *shopLbl;
+
+- (IBAction)getAccurateSizeButtonTapped:(id)sender;
+- (IBAction)shopForShoesButtonTapped:(id)sender;
+- (IBAction)fbButtonTapped:(id)sender;
+- (IBAction)twitterButtonTapped:(id)sender;
+- (IBAction)mailButtonTapped:(id)sender;
 
 @end
 

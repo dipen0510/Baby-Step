@@ -30,10 +30,12 @@
     self.placeFootImgView.layer.zPosition = 10;
     
     [self.footImgView setHidden:YES];
+    [self.footScanButton setHidden:false];
+    [self.placeFootImgView setHidden:true];
     
-    isScanStarted = true;
-    [NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(scanComplete) userInfo:nil repeats:NO];
-    self.scanHeadLbl.text = @"Scanning";
+//    isScanStarted = true;
+//    [NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(scanComplete) userInfo:nil repeats:NO];
+    self.scanHeadLbl.text = @"Start Scan";
     
 
     self.automaticallyAdjustsScrollViewInsets = NO;
@@ -120,6 +122,10 @@
             [touchViewArr addObject:touchView];
             [touchArr addObject:touch];
             
+            if ([touchArr count] == 1) {
+                [NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(scanComplete) userInfo:nil repeats:NO];
+            }
+            
             CGPoint center = [touch locationInView:self.view];
             NSLog(@"Touch detected at %6.1f | %6.1f", center.x, center.y);
             CGFloat radius = [touch majorRadius];
@@ -149,7 +155,6 @@
         maxY = 0.0;
         sizeInCms = 0.0;
         
-        [NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(scanComplete) userInfo:nil repeats:NO];
         self.scanHeadLbl.text = @"Scanning";
         
         [self.footScanButton setHidden:true];
@@ -192,10 +197,10 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     if (![[[SharedContent sharedInstance] childArr] count]) {
-        return 1;
+        return 0;
     }
     
-    return ([[[SharedContent sharedInstance] childArr] count] + 1);
+    return ([[[SharedContent sharedInstance] childArr] count]);
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -209,26 +214,9 @@
     }
     
     
-    if (![[[SharedContent sharedInstance] childArr] count]) {
-        cell.nameLbl.text = @"Add Child";
-        cell.imgView.image = [UIImage imageNamed:@"add_Child_btn.png"];
-    }
-    else {
-        
-        if (indexPath.row > ([[[SharedContent sharedInstance] childArr] count] - 1)) {
-            
-            cell.nameLbl.text = @"Add Child";
-            cell.imgView.image = [UIImage imageNamed:@"add_Child_btn.png"];
-            
-        }
-        else {
-            
-            cell.nameLbl.text = [[[[SharedContent sharedInstance] childArr] objectAtIndex:indexPath.row] valueForKey:@"Name"];
-            cell.imgView.image = [UIImage imageNamed:@"Boy_avatar.png"];
-            
-        }
-        
-    }
+    cell.nameLbl.text = [[[[SharedContent sharedInstance] childArr] objectAtIndex:indexPath.row] valueForKey:@"Name"];
+    cell.imgView.image = [UIImage imageNamed:@"Boy_avatar.png"];
+    
     
     return cell;
     
@@ -243,21 +231,6 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:true];
     [self hideTableView];
-    
-    
-    if (![[[SharedContent sharedInstance] childArr] count]) {
-        [self performSegueWithIdentifier:@"showAddChildSegue" sender:nil];
-    }
-    else {
-        
-        if (indexPath.row > ([[[SharedContent sharedInstance] childArr] count] - 1)) {
-            
-            [self performSegueWithIdentifier:@"showAddChildSegue" sender:nil];
-            
-        }
-        
-    }
-    
     
 }
 
@@ -362,6 +335,107 @@
     }
     [[SharedContent sharedInstance] setDidTapBackGroundView: false];
     
+}
+
+- (IBAction)fbButtonTapped:(id)sender {
+    
+    [FBSDKShareDialog showFromViewController:self
+                                 withContent:[[SharedContent sharedInstance] prepareFBShareContent]
+                                    delegate:self];
+    
+}
+
+- (IBAction)twitterButtonTapped:(id)sender {
+    
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
+        
+        SLComposeViewController *tweet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+        [tweet setInitialText:@"Baby Step is awesome app!!!"];
+        [tweet setCompletionHandler:^(SLComposeViewControllerResult result)
+         {
+             if (result == SLComposeViewControllerResultCancelled)
+             {
+                 NSLog(@"The user cancelled.");
+                 [SVProgressHUD showErrorWithStatus:@"User cancelled"];
+             }
+             else if (result == SLComposeViewControllerResultDone)
+             {
+                 NSLog(@"The user sent the tweet");
+                 [SVProgressHUD showSuccessWithStatus:@"Posted successfully"];
+             }
+         }];
+        [self presentViewController:tweet animated:YES completion:nil];
+        
+    }
+    
+}
+
+- (IBAction)mailButtonTapped:(id)sender {
+    
+    MFMailComposeViewController* controller = [[SharedContent sharedInstance] prepareMailShareContent];
+    controller.mailComposeDelegate = self;
+    
+    // Present mail view controller on screen
+    [self presentViewController:controller animated:YES completion:NULL];
+    
+}
+
+- (IBAction)addChildButtonTapped:(id)sender {
+    
+    if ([[[SharedContent sharedInstance] userId] intValue] != 0) {
+        [self performSegueWithIdentifier:@"showAddChildSegue" sender:nil];
+    }
+    else {
+        
+        [SVProgressHUD showErrorWithStatus:@"Please login to add child"];
+        
+    }
+    
+}
+
+
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+            NSLog(@"Mail cancelled");
+            [SVProgressHUD showErrorWithStatus:@"User cancelled"];
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"Mail saved");
+            [SVProgressHUD showSuccessWithStatus:@"Mail saved successfully"];
+            break;
+        case MFMailComposeResultSent:
+            NSLog(@"Mail sent");
+            [SVProgressHUD showSuccessWithStatus:@"Mail sent successfully"];
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"Mail sent failure: %@", [error localizedDescription]);
+            [SVProgressHUD showErrorWithStatus:@"Mail sent failure"];
+            break;
+        default:
+            break;
+    }
+    
+    // Close the Mail Interface
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+#pragma mark - FBSDKSharingDelegate
+- (void)sharer:(id<FBSDKSharing>)sharer didCompleteWithResults :(NSDictionary *)results {
+    NSLog(@"FB: SHARE RESULTS=%@\n",[results debugDescription]);
+    [SVProgressHUD showSuccessWithStatus:@"Posted successfully"];
+}
+
+- (void)sharer:(id<FBSDKSharing>)sharer didFailWithError:(NSError *)error {
+    NSLog(@"FB: ERROR=%@\n",[error debugDescription]);
+    [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"Network Error %@",[error description]]];
+}
+
+- (void)sharerDidCancel:(id<FBSDKSharing>)sharer {
+    NSLog(@"FB: CANCELED SHARER=%@\n",[sharer debugDescription]);
+    [SVProgressHUD showErrorWithStatus:@"User cancelled"];
 }
 
 @end

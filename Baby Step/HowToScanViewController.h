@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HowToScanViewController : UIViewController<DataSyncManagerDelegate> {
+@interface HowToScanViewController : UIViewController<DataSyncManagerDelegate,FBSDKSharingDelegate,MFMailComposeViewControllerDelegate> {
     
     int isOptionSelected;
     NSString* childName;
@@ -25,5 +25,8 @@
 - (IBAction)girlButtonTapped:(id)sender;
 - (IBAction)shopForShoesButtonTapped:(id)sender;
 - (IBAction)startButtonTapped:(id)sender;
+- (IBAction)fbButtonTapped:(id)sender;
+- (IBAction)twitterButtonTapped:(id)sender;
+- (IBAction)mailButtonTapped:(id)sender;
 
 @end
