@@ -25,7 +25,7 @@ static SharedContent *sharedObject = nil;
 
 - (void) handleShopForButtonTap {
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.babyoye.com"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.snapdeal.com/products/kids-footwear#bcrumbLabelId:18?utm_source=aff_prog&utm_campaign=afts&offer_id=17&aff_id=75457"]];
     
 }
 

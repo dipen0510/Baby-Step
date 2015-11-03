@@ -56,6 +56,8 @@
     isScanStarted = false;
     self.scanHeadLbl.text = @"Scan Completed";
     
+    [self playCompletionSound];
+    
     [self.footScanButton setHidden:false];
     [self.placeFootImgView setHidden:true];
     [self.footImgView setHidden:false];
@@ -102,6 +104,20 @@
     
 }
 
+- (void) playCompletionSound {
+    
+    NSString *soundFilePath = [NSString stringWithFormat:@"%@/%@.mp3",
+                               [[NSBundle mainBundle] resourcePath], @"chime"];
+    NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
+    
+    _player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL
+                                                     error:nil];
+    _player.numberOfLoops = 0;
+    
+    [_player play];
+    
+}
+
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
     
@@ -123,7 +139,7 @@
             [touchArr addObject:touch];
             
             if ([touchArr count] == 1) {
-                [NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(scanComplete) userInfo:nil repeats:NO];
+                [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(scanComplete) userInfo:nil repeats:NO];
             }
             
             CGPoint center = [touch locationInView:self.view];

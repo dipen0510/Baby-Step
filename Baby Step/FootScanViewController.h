@@ -10,6 +10,8 @@
 #import "RecommendedSizeViewController.h"
 #import "MZFormSheetController.h"
 #import "MZFormSheetSegue.h"
+#import <AudioToolbox/AudioToolbox.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface FootScanViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,FBSDKSharingDelegate,MFMailComposeViewControllerDelegate> {
     
@@ -23,6 +25,7 @@
     
 }
 
+@property (strong, nonatomic) AVAudioPlayer *player;
 @property (weak, nonatomic) IBOutlet UIImageView *placeFootImgView;
 @property (weak, nonatomic) IBOutlet UIButton *footScanButton;
 @property (weak, nonatomic) IBOutlet UIImageView *footImgView;
