@@ -64,12 +64,12 @@
 		184AB0D91BCC55CA0013A490 /* ChildTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184AB0D71BCC55CA0013A490 /* ChildTableViewCell.xib */; };
 		184AB0DC1BCC57E50013A490 /* add_Child_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 184AB0DA1BCC57E50013A490 /* add_Child_btn@2x.png */; };
 		184AB0DD1BCC57E50013A490 /* Boy_avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 184AB0DB1BCC57E50013A490 /* Boy_avatar@2x.png */; };
-		18521D141BC99D33001E0392 /* foot_impression@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18521D131BC99D33001E0392 /* foot_impression@2x.png */; };
-		1860B4FB1BE92F860052EDCD /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18521D1A1BC9A7E6001E0392 /* FBSDKCoreKit.framework */; };
-		1860B4FC1BE92F860052EDCD /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18521D1B1BC9A7E6001E0392 /* FBSDKLoginKit.framework */; };
-		1860B4FD1BE92F860052EDCD /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18921AD81BDC379A005FDD58 /* FBSDKShareKit.framework */; };
 		1860B4FF1BE933C30052EDCD /* chime.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1860B4FE1BE933C30052EDCD /* chime.mp3 */; };
 		18921ADB1BDC482F005FDD58 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18921ADA1BDC482E005FDD58 /* Social.framework */; };
+		189DAF731BF1CAE500306A3F /* foot_impression@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 189DAF721BF1CAE500306A3F /* foot_impression@2x.png */; };
+		189DAF741BF1CB6B00306A3F /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18521D1A1BC9A7E6001E0392 /* FBSDKCoreKit.framework */; };
+		189DAF751BF1CB6B00306A3F /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18521D1B1BC9A7E6001E0392 /* FBSDKLoginKit.framework */; };
+		189DAF761BF1CB6B00306A3F /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18921AD81BDC379A005FDD58 /* FBSDKShareKit.framework */; };
 		18FCF4731BA4BBBC00D5504A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF4721BA4BBBC00D5504A /* main.m */; };
 		18FCF4761BA4BBBC00D5504A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF4751BA4BBBC00D5504A /* AppDelegate.m */; };
 		18FCF4791BA4BBBC00D5504A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF4781BA4BBBC00D5504A /* ViewController.m */; };
@@ -207,12 +207,12 @@
 		184AB0D71BCC55CA0013A490 /* ChildTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildTableViewCell.xib; sourceTree = "<group>"; };
 		184AB0DA1BCC57E50013A490 /* add_Child_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add_Child_btn@2x.png"; sourceTree = "<group>"; };
 		184AB0DB1BCC57E50013A490 /* Boy_avatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Boy_avatar@2x.png"; sourceTree = "<group>"; };
-		18521D131BC99D33001E0392 /* foot_impression@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "foot_impression@2x.png"; sourceTree = "<group>"; };
 		18521D1A1BC9A7E6001E0392 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		18521D1B1BC9A7E6001E0392 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		1860B4FE1BE933C30052EDCD /* chime.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chime.mp3; sourceTree = "<group>"; };
 		18921AD81BDC379A005FDD58 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		18921ADA1BDC482E005FDD58 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		189DAF721BF1CAE500306A3F /* foot_impression@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "foot_impression@2x.png"; sourceTree = "<group>"; };
 		18FCF46D1BA4BBBC00D5504A /* Baby Step.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Baby Step.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FCF4711BA4BBBC00D5504A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18FCF4721BA4BBBC00D5504A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -250,9 +250,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1860B4FB1BE92F860052EDCD /* FBSDKCoreKit.framework in Frameworks */,
-				1860B4FC1BE92F860052EDCD /* FBSDKLoginKit.framework in Frameworks */,
-				1860B4FD1BE92F860052EDCD /* FBSDKShareKit.framework in Frameworks */,
+				189DAF741BF1CB6B00306A3F /* FBSDKCoreKit.framework in Frameworks */,
+				189DAF751BF1CB6B00306A3F /* FBSDKLoginKit.framework in Frameworks */,
+				189DAF761BF1CB6B00306A3F /* FBSDKShareKit.framework in Frameworks */,
 				18921ADB1BDC482F005FDD58 /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,11 +512,11 @@
 		18FCF4961BA4BF9A00D5504A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				189DAF721BF1CAE500306A3F /* foot_impression@2x.png */,
 				1860B4FE1BE933C30052EDCD /* chime.mp3 */,
 				184AB0DA1BCC57E50013A490 /* add_Child_btn@2x.png */,
 				184AB0DB1BCC57E50013A490 /* Boy_avatar@2x.png */,
 				184AB0D21BCC547A0013A490 /* arrow-down@2x.png */,
-				18521D131BC99D33001E0392 /* foot_impression@2x.png */,
 				18250C411BB71BC400F24551 /* AddBtn@2x.png */,
 				18250C3B1BB7163F00F24551 /* Step_01@2x.png */,
 				18250C3C1BB7163F00F24551 /* Step_02@2x.png */,
@@ -638,13 +638,13 @@
 				18FCF4A21BA4C28A00D5504A /* background@2x.png in Resources */,
 				18250C3A1BB7128000F24551 /* Start_btn@2x.png in Resources */,
 				1811C3E61BA600A9006A7DB5 /* Sizes_bg@2x.png in Resources */,
+				189DAF731BF1CAE500306A3F /* foot_impression@2x.png in Resources */,
 				18FCF4AF1BA4D5D300D5504A /* foot@2x.png in Resources */,
 				18FCF4A81BA4C7D600D5504A /* shop@2x.png in Resources */,
 				18250C3E1BB7163F00F24551 /* Step_01@2x.png in Resources */,
 				18250C341BB70E7900F24551 /* Boy_AddChild@2x.png in Resources */,
 				18FCF47C1BA4BBBC00D5504A /* Main.storyboard in Resources */,
 				18FCF49F1BA4C1F000D5504A /* mail@2x.png in Resources */,
-				18521D141BC99D33001E0392 /* foot_impression@2x.png in Resources */,
 				1811C3EE1BA6030E006A7DB5 /* invite_friends_popover@2x.png in Resources */,
 				18250C421BB71BC400F24551 /* AddBtn@2x.png in Resources */,
 				1811C4151BA60840006A7DB5 /* ScanAgain@2x.png in Resources */,
@@ -870,6 +870,8 @@
 					Step,
 					"$(PROJECT_DIR)/Baby",
 					Step,
+					"$(PROJECT_DIR)/Baby",
+					Step,
 				);
 				GCC_PREFIX_HEADER = "Baby Step/PrefixHeader.pch";
 				INFOPLIST_FILE = "Baby Step/Info.plist";
@@ -891,6 +893,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Swapnil Harkanth (CZA6DXR72T)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Baby",
+					Step,
 					"$(PROJECT_DIR)/Baby",
 					Step,
 					"$(PROJECT_DIR)/Baby",
