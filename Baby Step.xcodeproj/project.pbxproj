@@ -65,11 +65,11 @@
 		184AB0DC1BCC57E50013A490 /* add_Child_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 184AB0DA1BCC57E50013A490 /* add_Child_btn@2x.png */; };
 		184AB0DD1BCC57E50013A490 /* Boy_avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 184AB0DB1BCC57E50013A490 /* Boy_avatar@2x.png */; };
 		1860B4FF1BE933C30052EDCD /* chime.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1860B4FE1BE933C30052EDCD /* chime.mp3 */; };
+		1889F4F11BF60665009286C9 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18521D1A1BC9A7E6001E0392 /* FBSDKCoreKit.framework */; };
+		1889F4F21BF60665009286C9 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18521D1B1BC9A7E6001E0392 /* FBSDKLoginKit.framework */; };
+		1889F4F31BF60665009286C9 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18921AD81BDC379A005FDD58 /* FBSDKShareKit.framework */; };
 		18921ADB1BDC482F005FDD58 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18921ADA1BDC482E005FDD58 /* Social.framework */; };
 		189DAF731BF1CAE500306A3F /* foot_impression@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 189DAF721BF1CAE500306A3F /* foot_impression@2x.png */; };
-		189DAF741BF1CB6B00306A3F /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18521D1A1BC9A7E6001E0392 /* FBSDKCoreKit.framework */; };
-		189DAF751BF1CB6B00306A3F /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18521D1B1BC9A7E6001E0392 /* FBSDKLoginKit.framework */; };
-		189DAF761BF1CB6B00306A3F /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18921AD81BDC379A005FDD58 /* FBSDKShareKit.framework */; };
 		18FCF4731BA4BBBC00D5504A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF4721BA4BBBC00D5504A /* main.m */; };
 		18FCF4761BA4BBBC00D5504A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF4751BA4BBBC00D5504A /* AppDelegate.m */; };
 		18FCF4791BA4BBBC00D5504A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF4781BA4BBBC00D5504A /* ViewController.m */; };
@@ -250,9 +250,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				189DAF741BF1CB6B00306A3F /* FBSDKCoreKit.framework in Frameworks */,
-				189DAF751BF1CB6B00306A3F /* FBSDKLoginKit.framework in Frameworks */,
-				189DAF761BF1CB6B00306A3F /* FBSDKShareKit.framework in Frameworks */,
+				1889F4F11BF60665009286C9 /* FBSDKCoreKit.framework in Frameworks */,
+				1889F4F21BF60665009286C9 /* FBSDKLoginKit.framework in Frameworks */,
+				1889F4F31BF60665009286C9 /* FBSDKShareKit.framework in Frameworks */,
 				18921ADB1BDC482F005FDD58 /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -872,6 +872,8 @@
 					Step,
 					"$(PROJECT_DIR)/Baby",
 					Step,
+					"$(PROJECT_DIR)/Baby",
+					Step,
 				);
 				GCC_PREFIX_HEADER = "Baby Step/PrefixHeader.pch";
 				INFOPLIST_FILE = "Baby Step/Info.plist";
@@ -893,6 +895,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Swapnil Harkanth (CZA6DXR72T)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Baby",
+					Step,
 					"$(PROJECT_DIR)/Baby",
 					Step,
 					"$(PROJECT_DIR)/Baby",

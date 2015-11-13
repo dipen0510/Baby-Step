@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RecommendedSizeViewController : UIViewController {
+@interface RecommendedSizeViewController : UIViewController<FBSDKSharingDelegate,MFMailComposeViewControllerDelegate> {
     
     float usSize;
     float ukSize;
@@ -23,6 +23,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *europeSizeLbl;
 
 - (IBAction)closeButtonTapped:(id)sender;
+- (IBAction)fbShareButtonTapped:(id)sender;
+- (IBAction)twitterButtonTapped:(id)sender;
+- (IBAction)inviteFriendsButtonTapped:(id)sender;
+- (IBAction)mailScanButtonTapped:(id)sender;
 
 
 @end

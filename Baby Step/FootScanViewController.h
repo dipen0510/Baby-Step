@@ -33,6 +33,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *footImageHeightConstraint;
 @property (weak, nonatomic) IBOutlet UITableView *dropDownTblView;
 @property (weak, nonatomic) IBOutlet UIButton *childButton;
+@property (weak, nonatomic) IBOutlet UIButton *addChildButton;
 
 - (IBAction)footScanButtonTapped:(id)sender;
 - (IBAction)backButtonTapped:(id)sender;

@@ -14,5 +14,6 @@
 - (IBAction)fbButtonTapped:(id)sender;
 - (IBAction)twitterButtonTapped:(id)sender;
 - (IBAction)mailButtonTapped:(id)sender;
+- (IBAction)shopForShoesButtonTapped:(id)sender;
 
 @end

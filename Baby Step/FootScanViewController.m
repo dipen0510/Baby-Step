@@ -44,6 +44,12 @@
     self.dropDownTblView.layer.borderWidth = 1.0;
     self.dropDownTblView.layer.cornerRadius = 5.0;
     
+    
+    if ([[[SharedContent sharedInstance] userId] intValue] == 0) {
+        [self.childButton setHidden:YES];
+        [self.addChildButton setHidden:YES];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -87,11 +93,11 @@
     
     NSLog(@"SIZE is %f",(maxY - minY)*0.026458333*0.1331);
     
-    if ((self.footScanButton.frame.origin.y + self.footScanButton.frame.size.height - minY) < 691) {
-        self.footImageHeightConstraint.constant = self.footScanButton.frame.origin.y + self.footScanButton.frame.size.height - minY;
+    if ((self.footScanButton.frame.origin.y + self.footScanButton.frame.size.height - minY) < 848) {
+        self.footImageHeightConstraint.constant = self.footScanButton.frame.origin.y + self.footScanButton.frame.size.height - minY + 150.0;
     }
     else {
-        self.footImageHeightConstraint.constant = 691;
+        self.footImageHeightConstraint.constant = 848;
     }
     
     sizeInCms = (maxY - minY)*0.026458333;

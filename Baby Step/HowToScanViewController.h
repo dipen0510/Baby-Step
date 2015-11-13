@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HowToScanViewController : UIViewController<DataSyncManagerDelegate,FBSDKSharingDelegate,MFMailComposeViewControllerDelegate> {
+@interface HowToScanViewController : UIViewController<DataSyncManagerDelegate,FBSDKSharingDelegate,MFMailComposeViewControllerDelegate,UITextFieldDelegate> {
     
     int isOptionSelected;
     NSString* childName;
+    
+    BOOL showKeyboardAnimation;
+    CGPoint viewCenter;
     
 }
 

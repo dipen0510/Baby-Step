@@ -40,6 +40,10 @@
     
 }
 
+- (IBAction)shopForShoesButtonTapped:(id)sender {
+    [[SharedContent sharedInstance] handleShopForButtonTap];
+}
+
 
 - (IBAction)fbButtonTapped:(id)sender {
     

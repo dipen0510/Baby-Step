@@ -17,6 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    viewCenter = self.view.center;
+    showKeyboardAnimation = true;
+    self.childNameTxtField.delegate = self;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -161,6 +166,7 @@
 
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    showKeyboardAnimation = true;
     [self.view endEditing:YES];
 }
 
@@ -287,6 +293,44 @@
 - (void)sharerDidCancel:(id<FBSDKSharing>)sharer {
     NSLog(@"FB: CANCELED SHARER=%@\n",[sharer debugDescription]);
     [SVProgressHUD showErrorWithStatus:@"User cancelled"];
+}
+
+#pragma mark - Textfield Delegates
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    showKeyboardAnimation = true;
+    [textField endEditing:YES];
+    return true;
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    if (textField.center.y>200 && showKeyboardAnimation) {
+        CGPoint MyPoint = self.view.center;
+        
+        [UIView animateWithDuration:0.3
+                         animations:^{
+                             
+                             self.view.center = CGPointMake(MyPoint.x, MyPoint.y - textField.center.y + 560);
+                         }];
+        
+        showKeyboardAnimation=false;
+    }
+    
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    if (showKeyboardAnimation) {
+        //CGPoint MyPoint = self.view.center;
+        
+        [UIView animateWithDuration:0.3
+                         animations:^{
+                             
+                             self.view.center = CGPointMake(viewCenter.x, viewCenter.y);
+                         }];
+        
+    }
 }
 
 @end
