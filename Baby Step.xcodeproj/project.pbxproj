@@ -64,12 +64,13 @@
 		184AB0D91BCC55CA0013A490 /* ChildTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184AB0D71BCC55CA0013A490 /* ChildTableViewCell.xib */; };
 		184AB0DC1BCC57E50013A490 /* add_Child_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 184AB0DA1BCC57E50013A490 /* add_Child_btn@2x.png */; };
 		184AB0DD1BCC57E50013A490 /* Boy_avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 184AB0DB1BCC57E50013A490 /* Boy_avatar@2x.png */; };
-		1860B4FF1BE933C30052EDCD /* chime.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1860B4FE1BE933C30052EDCD /* chime.mp3 */; };
-		1889F4F11BF60665009286C9 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18521D1A1BC9A7E6001E0392 /* FBSDKCoreKit.framework */; };
-		1889F4F21BF60665009286C9 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18521D1B1BC9A7E6001E0392 /* FBSDKLoginKit.framework */; };
-		1889F4F31BF60665009286C9 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18921AD81BDC379A005FDD58 /* FBSDKShareKit.framework */; };
 		18921ADB1BDC482F005FDD58 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18921ADA1BDC482E005FDD58 /* Social.framework */; };
 		189DAF731BF1CAE500306A3F /* foot_impression@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 189DAF721BF1CAE500306A3F /* foot_impression@2x.png */; };
+		18AB05EA1C02499B004B3C44 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18521D1A1BC9A7E6001E0392 /* FBSDKCoreKit.framework */; };
+		18AB05EB1C02499B004B3C44 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18521D1B1BC9A7E6001E0392 /* FBSDKLoginKit.framework */; };
+		18AB05EC1C02499B004B3C44 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18921AD81BDC379A005FDD58 /* FBSDKShareKit.framework */; };
+		18AB05EE1C024AE7004B3C44 /* fbHome.png in Resources */ = {isa = PBXBuildFile; fileRef = 18AB05ED1C024AE7004B3C44 /* fbHome.png */; };
+		18AB05F01C025018004B3C44 /* chime1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18AB05EF1C025018004B3C44 /* chime1.mp3 */; };
 		18FCF4731BA4BBBC00D5504A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF4721BA4BBBC00D5504A /* main.m */; };
 		18FCF4761BA4BBBC00D5504A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF4751BA4BBBC00D5504A /* AppDelegate.m */; };
 		18FCF4791BA4BBBC00D5504A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF4781BA4BBBC00D5504A /* ViewController.m */; };
@@ -209,10 +210,11 @@
 		184AB0DB1BCC57E50013A490 /* Boy_avatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Boy_avatar@2x.png"; sourceTree = "<group>"; };
 		18521D1A1BC9A7E6001E0392 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		18521D1B1BC9A7E6001E0392 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		1860B4FE1BE933C30052EDCD /* chime.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chime.mp3; sourceTree = "<group>"; };
 		18921AD81BDC379A005FDD58 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		18921ADA1BDC482E005FDD58 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		189DAF721BF1CAE500306A3F /* foot_impression@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "foot_impression@2x.png"; sourceTree = "<group>"; };
+		18AB05ED1C024AE7004B3C44 /* fbHome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fbHome.png; sourceTree = "<group>"; };
+		18AB05EF1C025018004B3C44 /* chime1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chime1.mp3; sourceTree = "<group>"; };
 		18FCF46D1BA4BBBC00D5504A /* Baby Step.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Baby Step.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FCF4711BA4BBBC00D5504A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18FCF4721BA4BBBC00D5504A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -250,9 +252,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1889F4F11BF60665009286C9 /* FBSDKCoreKit.framework in Frameworks */,
-				1889F4F21BF60665009286C9 /* FBSDKLoginKit.framework in Frameworks */,
-				1889F4F31BF60665009286C9 /* FBSDKShareKit.framework in Frameworks */,
+				18AB05EA1C02499B004B3C44 /* FBSDKCoreKit.framework in Frameworks */,
+				18AB05EB1C02499B004B3C44 /* FBSDKLoginKit.framework in Frameworks */,
+				18AB05EC1C02499B004B3C44 /* FBSDKShareKit.framework in Frameworks */,
 				18921ADB1BDC482F005FDD58 /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,8 +514,9 @@
 		18FCF4961BA4BF9A00D5504A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				18AB05EF1C025018004B3C44 /* chime1.mp3 */,
+				18AB05ED1C024AE7004B3C44 /* fbHome.png */,
 				189DAF721BF1CAE500306A3F /* foot_impression@2x.png */,
-				1860B4FE1BE933C30052EDCD /* chime.mp3 */,
 				184AB0DA1BCC57E50013A490 /* add_Child_btn@2x.png */,
 				184AB0DB1BCC57E50013A490 /* Boy_avatar@2x.png */,
 				184AB0D21BCC547A0013A490 /* arrow-down@2x.png */,
@@ -651,6 +654,7 @@
 				18250C381BB70E8A00F24551 /* Girl_AddChild@2x.png in Resources */,
 				18FCF4811BA4BBBC00D5504A /* LaunchScreen.xib in Resources */,
 				18250C331BB70E7900F24551 /* Boy_AddChild_active@2x.png in Resources */,
+				18AB05EE1C024AE7004B3C44 /* fbHome.png in Resources */,
 				18250C371BB70E8A00F24551 /* Girl_AddChild_active@2x.png in Resources */,
 				184AB0D31BCC547A0013A490 /* arrow-down@2x.png in Resources */,
 				D45623741BA7E7FE0090C2F6 /* text_field@2x.png in Resources */,
@@ -669,8 +673,8 @@
 				184AB0DC1BCC57E50013A490 /* add_Child_btn@2x.png in Resources */,
 				18FCF4B01BA4D5D300D5504A /* Place_foot@2x.png in Resources */,
 				18FCF4A71BA4C7D500D5504A /* measure@2x.png in Resources */,
-				1860B4FF1BE933C30052EDCD /* chime.mp3 in Resources */,
 				18FCF4A01BA4C1F000D5504A /* twitter@2x.png in Resources */,
+				18AB05F01C025018004B3C44 /* chime1.mp3 in Resources */,
 				D45623781BA7E9100090C2F6 /* Register@2x.png in Resources */,
 				18FCF4AB1BA4CA8100D5504A /* GetStartedBtn@2x.png in Resources */,
 				18FCF4981BA4BFA200D5504A /* splash_screen@2x.png in Resources */,
@@ -874,6 +878,10 @@
 					Step,
 					"$(PROJECT_DIR)/Baby",
 					Step,
+					"$(PROJECT_DIR)/Baby",
+					Step,
+					"$(PROJECT_DIR)/Baby",
+					Step,
 				);
 				GCC_PREFIX_HEADER = "Baby Step/PrefixHeader.pch";
 				INFOPLIST_FILE = "Baby Step/Info.plist";
@@ -895,6 +903,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Swapnil Harkanth (CZA6DXR72T)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Baby",
+					Step,
+					"$(PROJECT_DIR)/Baby",
+					Step,
 					"$(PROJECT_DIR)/Baby",
 					Step,
 					"$(PROJECT_DIR)/Baby",

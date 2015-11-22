@@ -113,7 +113,7 @@
 - (void) playCompletionSound {
     
     NSString *soundFilePath = [NSString stringWithFormat:@"%@/%@.mp3",
-                               [[NSBundle mainBundle] resourcePath], @"chime"];
+                               [[NSBundle mainBundle] resourcePath], @"chime1"];
     NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
     
     _player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL

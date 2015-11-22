@@ -21,6 +21,7 @@
 + (id) sharedInstance;
 - (void) handleShopForButtonTap;
 - (FBSDKShareOpenGraphContent* ) prepareFBShareContent;
+-(FBSDKShareOpenGraphContent* ) prepareFBShareContentForImage:(UIImage *)image;
 - (MFMailComposeViewController *) prepareMailShareContent;
 
 @end

@@ -24,5 +24,6 @@
 - (IBAction)fbButtonTapped:(id)sender;
 - (IBAction)twitterButtonTapped:(id)sender;
 - (IBAction)mailButtonTapped:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
 
 @end

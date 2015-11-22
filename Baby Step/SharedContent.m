@@ -34,7 +34,43 @@ static SharedContent *sharedObject = nil;
     
     // Construct an FBSDKSharePhoto
     FBSDKSharePhoto *photo = [[FBSDKSharePhoto alloc] init];
-    photo.image = [UIImage imageNamed:@"foot_impression.png"];
+    photo.image = [UIImage imageNamed:@"fbHome.png"];
+    // Optionally set user generated to YES only if this image was created by the user
+    // You must get approval for this capability in your app's Open Graph configuration
+    photo.userGenerated = YES;
+    
+    // Create an object
+    NSDictionary *properties = @{
+                                 @"og:type": @"books.book",
+                                 @"og:title": @"A Game of Thrones",
+                                 @"og:description": @"In the frozen wastes to the north of Winterfell, sinister and supernatural forces are mustering.",
+                                 @"books:isbn": @"0-553-57340-3",
+                                 };
+    FBSDKShareOpenGraphObject *object = [FBSDKShareOpenGraphObject objectWithProperties:properties];
+    
+    
+    // Create an action
+    FBSDKShareOpenGraphAction *action = [[FBSDKShareOpenGraphAction alloc] init];
+    action.actionType = @"books.reads";
+    [action setObject:object forKey:@"books:book"];
+    
+    // Add the photo to the action. Actions
+    // can take an array of images.
+    [action setArray:@[photo] forKey:@"image"];
+    
+    // Create the content
+    FBSDKShareOpenGraphContent *content = [[FBSDKShareOpenGraphContent alloc] init];
+    content.action = action;
+    content.previewPropertyName = @"books:book";
+    
+    return content;
+}
+
+-(FBSDKShareOpenGraphContent* ) prepareFBShareContentForImage:(UIImage *)image {
+    
+    // Construct an FBSDKSharePhoto
+    FBSDKSharePhoto *photo = [[FBSDKSharePhoto alloc] init];
+    photo.image = image;
     // Optionally set user generated to YES only if this image was created by the user
     // You must get approval for this capability in your app's Open Graph configuration
     photo.userGenerated = YES;

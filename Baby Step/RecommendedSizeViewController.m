@@ -8,6 +8,8 @@
 
 #import "RecommendedSizeViewController.h"
 #import "MZFormSheetController.h"
+#import <AddressBook/AddressBook.h>
+#import <MessageUI/MessageUI.h>
 
 @interface RecommendedSizeViewController ()
 
@@ -174,7 +176,7 @@
 
 - (IBAction)fbShareButtonTapped:(id)sender {
     [FBSDKShareDialog showFromViewController:self
-                                 withContent:[[SharedContent sharedInstance] prepareFBShareContent]
+                                 withContent:[[SharedContent sharedInstance] prepareFBShareContentForImage:[self screenshot]]
                                     delegate:self];
 }
 
@@ -202,6 +204,7 @@
 }
 
 - (IBAction)inviteFriendsButtonTapped:(id)sender {
+    [self sendInviteMessageToAll];
 }
 
 - (IBAction)mailScanButtonTapped:(id)sender {
@@ -257,5 +260,63 @@
     [SVProgressHUD showErrorWithStatus:@"User cancelled"];
 }
 
+- (UIImage *) screenshot {
+    
+    CGSize size = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height);
+    
+    UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
+    
+    CGRect rec = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    [self.view drawViewHierarchyInRect:rec afterScreenUpdates:YES];
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
+- (NSMutableArray *) getAllContacts {
+    
+    NSMutableArray* contactPhoneNumbers = [[NSMutableArray alloc] init];
+    
+    CFErrorRef *error = NULL;
+    ABAddressBookRef addressBook = ABAddressBookCreateWithOptions(NULL, error);
+    CFArrayRef allPeople = ABAddressBookCopyArrayOfAllPeople(addressBook);
+    CFIndex numberOfPeople = ABAddressBookGetPersonCount(addressBook);
+    
+    for(int i = 0; i < numberOfPeople; i++) {
+        
+        ABRecordRef person = CFArrayGetValueAtIndex( allPeople, i );
+        
+        NSString *firstName = (__bridge NSString *)(ABRecordCopyValue(person, kABPersonFirstNameProperty));
+        NSString *lastName = (__bridge NSString *)(ABRecordCopyValue(person, kABPersonLastNameProperty));
+        NSLog(@"Name:%@ %@", firstName, lastName);
+        
+        ABMultiValueRef phoneNumbers = ABRecordCopyValue(person, kABPersonPhoneProperty);
+        [contactPhoneNumbers addObject:(__bridge_transfer NSString *) ABMultiValueCopyValueAtIndex(phoneNumbers, 0)];
+    
+        
+        NSLog(@"=============================================");
+        
+    }
+    
+    return contactPhoneNumbers;
+    
+}
+
+- (void) sendInviteMessageToAll {
+    
+    
+    MFMessageComposeViewController* messageInstance = [[MFMessageComposeViewController alloc] init];
+    if ([MFMessageComposeViewController canSendText]) {
+        
+        messageInstance.body = @"Baby Step - Measuring your baby's foot was never this fun ";
+        messageInstance.recipients = [self getAllContacts];
+        messageInstance.messageComposeDelegate = self;
+        [self presentModalViewController:messageInstance animated:YES];
+        
+    }
+    
+    
+}
 
 @end

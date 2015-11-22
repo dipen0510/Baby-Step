@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RecommendedSizeViewController : UIViewController<FBSDKSharingDelegate,MFMailComposeViewControllerDelegate> {
+@interface RecommendedSizeViewController : UIViewController<FBSDKSharingDelegate,MFMailComposeViewControllerDelegate,MFMessageComposeViewControllerDelegate,UINavigationControllerDelegate> {
     
     float usSize;
     float ukSize;
