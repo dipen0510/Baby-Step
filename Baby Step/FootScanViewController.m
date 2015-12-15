@@ -89,15 +89,30 @@
     }
     
     
+    if (isTouchMoved) {
+        
+        isTouchMoved = false;
+        maxY = touchMaxY;
+        minY = touchMinY;
+        
+    }
+    
+    
+    if (self.footImgView.frame.origin.y + self.footImgView.frame.size.height < maxY) {
+        maxY = self.footImgView.frame.origin.y + self.footImgView.frame.size.height ;
+    }
+    
+    
+    
     NSLog(@"\n\n\nDIPEN TEST\n\n\n Min - %f\n Max - %f",minY,maxY );
     
     NSLog(@"SIZE is %f",(maxY - minY)*0.026458333*0.1331);
     
-    if ((self.footScanButton.frame.origin.y + self.footScanButton.frame.size.height - minY) < 848) {
-        self.footImageHeightConstraint.constant = self.footScanButton.frame.origin.y + self.footScanButton.frame.size.height - minY + 150.0;
+    if ((self.footScanButton.frame.origin.y + self.footScanButton.frame.size.height - minY) < 771) {
+        self.footImageHeightConstraint.constant = self.footScanButton.frame.origin.y + self.footScanButton.frame.size.height - minY + 50.0;
     }
     else {
-        self.footImageHeightConstraint.constant = 848;
+        self.footImageHeightConstraint.constant = 771;
     }
     
     sizeInCms = (maxY - minY)*0.026458333;
@@ -145,11 +160,11 @@
             [touchArr addObject:touch];
             
             if ([touchArr count] == 1) {
-                [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(scanComplete) userInfo:nil repeats:NO];
+                timer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(scanComplete) userInfo:nil repeats:NO];
             }
             
             CGPoint center = [touch locationInView:self.view];
-            NSLog(@"Touch detected at %6.1f | %6.1f", center.x, center.y);
+            NSLog(@"Touch BEGAN detected at %6.1f | %6.1f", center.x, center.y);
             CGFloat radius = [touch majorRadius];
             NSLog(@"Radius = %5.1f; lower limit = %5.1f; upper limit = %5.1f", radius, radius-touch.majorRadiusTolerance, radius+touch.majorRadiusTolerance);
             
@@ -158,6 +173,81 @@
     
     
 }
+
+
+-(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    [timer invalidate];
+    isTouchMoved = YES;
+    
+    [self.footImgView setHidden:false];
+    
+    if (isScanStarted) {
+        // Enumerate over all the touches and draw a red dot on the screen where the touches were
+        [touches enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
+            // Get a single touch and it's location
+            UITouch *touch = obj;
+            CGPoint touchPoint = [touch locationInView:self.view];
+            
+            // Draw a red circle where the touch occurred
+            UIView *touchView = [[UIView alloc] init];
+            [touchView setBackgroundColor:[UIColor clearColor]];
+            touchView.frame = CGRectMake(touchPoint.x, touchPoint.y, 30, 30);
+            touchView.layer.cornerRadius = 15;
+            [self.view addSubview:touchView];
+            
+            [touchViewArr addObject:touchView];
+            [touchArr addObject:touch];
+        
+            
+            CGPoint center = [touch locationInView:self.view];
+            NSLog(@"Touch MOVED detected at %6.1f | %6.1f", center.x, center.y);
+            
+            if (touchCounter == 0) {
+                touchMaxY = center.y;
+                touchMinY = center.y;
+            }
+            else {
+                
+                if (center.y>touchMaxY) {
+                    touchMaxY = center.y;
+                }
+                if (center.y<touchMinY) {
+                    touchMinY = center.y;
+                }
+                
+            }
+            
+            touchCounter++;
+            touchDiffY = self.footScanButton.frame.origin.y + self.footScanButton.frame.size.height - center.y + 50.0;//touchMaxY - touchMinY;
+            
+            self.footImageHeightConstraint.constant = touchDiffY;
+            
+            touchLastY = center.y;
+            
+            /*CGFloat radius = [touch majorRadius];
+            NSLog(@"Radius = %5.1f; lower limit = %5.1f; upper limit = %5.1f", radius, radius-touch.majorRadiusTolerance, radius+touch.majorRadiusTolerance);*/
+            
+        }];
+    }
+    
+}
+
+-(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    if (isTouchMoved) {
+        
+        if (touchLastY>touchMinY) {
+            touchMinY = touchLastY;
+        }
+        [self scanComplete];
+        
+    }
+    
+    
+}
+
+
 
 - (IBAction)footScanButtonTapped:(id)sender {
     
@@ -176,6 +266,13 @@
         minY = 0.0;
         maxY = 0.0;
         sizeInCms = 0.0;
+        
+        touchMaxY = 0.0;
+        touchMinY = 0.0;
+        touchDiffY = 0.0;
+        touchLastY = 0.0;
+        
+        touchCounter = 0;
         
         self.scanHeadLbl.text = @"Scanning";
         

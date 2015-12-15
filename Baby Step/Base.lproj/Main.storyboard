@@ -1519,10 +1519,10 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foot_impression.png" translatesAutoresizingMaskIntoConstraints="NO" id="fJm-VY-xPM">
-                                <rect key="frame" x="226" y="183" width="473" height="848"/>
+                                <rect key="frame" x="289" y="183" width="410" height="771"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="848" id="brM-R5-WR3"/>
+                                    <constraint firstAttribute="height" constant="771" id="brM-R5-WR3"/>
                                 </constraints>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="constraints">
@@ -1558,14 +1558,14 @@
                             <constraint firstItem="Pe6-2z-Xdl" firstAttribute="top" secondItem="nUF-Xn-4rs" secondAttribute="bottom" constant="31" id="lIf-aq-2rJ"/>
                             <constraint firstItem="AFf-vP-aEX" firstAttribute="leading" secondItem="6oU-7d-bax" secondAttribute="trailing" constant="8" id="mCb-PU-Rwp"/>
                             <constraint firstItem="lIK-5A-JS1" firstAttribute="top" secondItem="noi-ma-MiA" secondAttribute="bottom" constant="36" id="oFk-3w-LGH"/>
-                            <constraint firstItem="5FH-s7-Ghs" firstAttribute="top" secondItem="fJm-VY-xPM" secondAttribute="bottom" constant="-31" id="qfk-Po-3Tz"/>
+                            <constraint firstItem="5FH-s7-Ghs" firstAttribute="top" secondItem="fJm-VY-xPM" secondAttribute="bottom" constant="46" id="qfk-Po-3Tz"/>
                             <constraint firstItem="noi-ma-MiA" firstAttribute="top" secondItem="nUF-Xn-4rs" secondAttribute="bottom" constant="8" id="rwK-vG-Ja6"/>
                             <constraint firstAttribute="centerX" secondItem="4YB-zw-Yf9" secondAttribute="centerX" id="sWL-6a-uW3"/>
                             <constraint firstItem="5FH-s7-Ghs" firstAttribute="top" secondItem="AFf-vP-aEX" secondAttribute="bottom" constant="8" id="vFS-oH-A80"/>
                             <constraint firstItem="5FH-s7-Ghs" firstAttribute="top" secondItem="zeU-jL-Snc" secondAttribute="bottom" constant="43" id="wMM-Zi-JXT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PsV-sN-WV7" secondAttribute="trailing" constant="111" id="wm7-F8-jhE"/>
                             <constraint firstItem="nhz-k4-U3J" firstAttribute="leading" secondItem="tJ4-JS-ZfI" secondAttribute="leadingMargin" constant="-20" id="xxG-hl-Acv"/>
-                            <constraint firstItem="fJm-VY-xPM" firstAttribute="leading" secondItem="tJ4-JS-ZfI" secondAttribute="leadingMargin" constant="206" id="zUU-JE-I3m"/>
+                            <constraint firstItem="fJm-VY-xPM" firstAttribute="leading" secondItem="tJ4-JS-ZfI" secondAttribute="leadingMargin" constant="269" id="zUU-JE-I3m"/>
                             <constraint firstItem="5FH-s7-Ghs" firstAttribute="top" secondItem="4aE-xx-CUf" secondAttribute="bottom" constant="8" id="zey-0f-dYY"/>
                         </constraints>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -2337,7 +2337,7 @@
         <image name="facebook.png" width="39" height="40"/>
         <image name="facebook_btn.png" width="298" height="58"/>
         <image name="facebook_popover.png" width="62" height="62"/>
-        <image name="foot_impression.png" width="728" height="1243"/>
+        <image name="foot_impression.png" width="579" height="997"/>
         <image name="invite_friends_popover.png" width="62" height="62"/>
         <image name="logo_top.png" width="212" height="85"/>
         <image name="mail.png" width="38" height="38"/>
@@ -2351,6 +2351,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="pQy-46-FLJ"/>
-        <segue reference="lfy-fi-PC4"/>
+        <segue reference="UGx-c8-SZf"/>
     </inferredMetricsTieBreakers>
 </document>

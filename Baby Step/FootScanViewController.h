@@ -23,6 +23,14 @@
     
     float sizeInCms;
     
+    NSTimer* timer;
+    BOOL isTouchMoved;
+    
+    long touchMaxY;
+    long touchMinY;
+    long touchDiffY;
+    long touchLastY;
+    int touchCounter;
 }
 
 @property (strong, nonatomic) AVAudioPlayer *player;
