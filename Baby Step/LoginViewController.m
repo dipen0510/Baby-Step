@@ -66,7 +66,7 @@
 
 - (IBAction)FBButtonTapped:(id)sender {
     
-    [SVProgressHUD showWithStatus:@"Loggin in. Please wait" maskType:SVProgressHUDMaskTypeBlack];
+    //[SVProgressHUD showWithStatus:@"Loggin in. Please wait" maskType:SVProgressHUDMaskTypeBlack];
     
     FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
     [login
