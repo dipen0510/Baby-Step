@@ -64,7 +64,6 @@
 		184AB0D91BCC55CA0013A490 /* ChildTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184AB0D71BCC55CA0013A490 /* ChildTableViewCell.xib */; };
 		184AB0DC1BCC57E50013A490 /* add_Child_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 184AB0DA1BCC57E50013A490 /* add_Child_btn@2x.png */; };
 		184AB0DD1BCC57E50013A490 /* Boy_avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 184AB0DB1BCC57E50013A490 /* Boy_avatar@2x.png */; };
-		18921ADB1BDC482F005FDD58 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18921ADA1BDC482E005FDD58 /* Social.framework */; };
 		18AB05EE1C024AE7004B3C44 /* fbHome.png in Resources */ = {isa = PBXBuildFile; fileRef = 18AB05ED1C024AE7004B3C44 /* fbHome.png */; };
 		18AB05F01C025018004B3C44 /* chime1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18AB05EF1C025018004B3C44 /* chime1.mp3 */; };
 		18CE73881C209E6C00D82351 /* foot_impression@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18CE73871C209E6C00D82351 /* foot_impression@2x.png */; };
@@ -95,6 +94,7 @@
 		D47179241C748E5C0009578D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D47179211C748E5C0009578D /* FBSDKCoreKit.framework */; };
 		D47179251C748E5C0009578D /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D47179221C748E5C0009578D /* FBSDKLoginKit.framework */; };
 		D47179261C748E5C0009578D /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D47179231C748E5C0009578D /* FBSDKShareKit.framework */; };
+		D47179291C74A5B50009578D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D47179281C74A5B50009578D /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -208,7 +208,6 @@
 		184AB0D71BCC55CA0013A490 /* ChildTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildTableViewCell.xib; sourceTree = "<group>"; };
 		184AB0DA1BCC57E50013A490 /* add_Child_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add_Child_btn@2x.png"; sourceTree = "<group>"; };
 		184AB0DB1BCC57E50013A490 /* Boy_avatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Boy_avatar@2x.png"; sourceTree = "<group>"; };
-		18921ADA1BDC482E005FDD58 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		18AB05ED1C024AE7004B3C44 /* fbHome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fbHome.png; sourceTree = "<group>"; };
 		18AB05EF1C025018004B3C44 /* chime1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chime1.mp3; sourceTree = "<group>"; };
 		18CE73871C209E6C00D82351 /* foot_impression@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "foot_impression@2x.png"; sourceTree = "<group>"; };
@@ -245,6 +244,7 @@
 		D47179211C748E5C0009578D /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		D47179221C748E5C0009578D /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		D47179231C748E5C0009578D /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		D47179281C74A5B50009578D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,8 +252,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D47179291C74A5B50009578D /* Social.framework in Frameworks */,
 				D47179261C748E5C0009578D /* FBSDKShareKit.framework in Frameworks */,
-				18921ADB1BDC482F005FDD58 /* Social.framework in Frameworks */,
 				D47179241C748E5C0009578D /* FBSDKCoreKit.framework in Frameworks */,
 				D47179251C748E5C0009578D /* FBSDKLoginKit.framework in Frameworks */,
 			);
@@ -272,7 +272,6 @@
 		1811C3F11BA605DD006A7DB5 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				18921ADA1BDC482E005FDD58 /* Social.framework */,
 				18521D191BC9A7D9001E0392 /* Facebook */,
 				18250C981BB72D4700F24551 /* SVProgressHUD */,
 				18250C521BB7250600F24551 /* AFNetworking */,
@@ -452,6 +451,7 @@
 		18FCF4641BA4BBBC00D5504A = {
 			isa = PBXGroup;
 			children = (
+				D47179281C74A5B50009578D /* Social.framework */,
 				18FCF46F1BA4BBBC00D5504A /* Baby Step */,
 				18FCF4891BA4BBBC00D5504A /* Baby StepTests */,
 				18FCF46E1BA4BBBC00D5504A /* Products */,
@@ -896,13 +896,14 @@
 				INFOPLIST_FILE = "Baby Step/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stardeep.babysteps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "7305dea3-64a6-4d26-9192-7bc2d101ab8e";
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
-				VALID_ARCHS = "armv7 armv7s armv64";
+				VALID_ARCHS = "armv7 arm64 armv7s";
 			};
 			name = Debug;
 		};
@@ -946,8 +947,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.stardeep.babysteps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "7305dea3-64a6-4d26-9192-7bc2d101ab8e";
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
-				VALID_ARCHS = "armv7 armv7s armv64";
+				VALID_ARCHS = "armv7 arm64 armv7s";
 			};
 			name = Release;
 		};
